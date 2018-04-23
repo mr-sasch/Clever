@@ -1,0 +1,27 @@
+mixin choosejal()
+	+b.choosejal&attributes(attributes)
+		block
+		.container
+			mixin titleCenter(title)
+				.title-center= title
+			+titleCenter('Выбирая жалюзи вы получаете:')
+			.row
+				.col
+					mixin chooseItem(img, title, text)
+						.choose-item.d-flex
+							.choose-item__img
+								img(src= img)
+							.choose-item__content
+								.choose-item__content-title= title
+								.choose-item__content-txt= text
+					+chooseItem('images/choosejal.png', 'Защиту от солнца', '')
+					+chooseItem('images/choosejal.png', 'Простоту ухода', 'просто протрите влажной тряпкой')
+					+chooseItem('images/choosejal.png', 'Элемент стиля', 'более 500 моделей, цветов и фактур, а также индивидуальные дизайны')
+				.col
+					+chooseItem('images/choosejal.png', 'Регулирование освещения', 'в зависимости от яркости света')
+					+chooseItem('images/choosejal.png', 'долговечность', '')
+					+chooseItem('images/choosejal.png', 'Фотожалюзи', 'печать любого изображения на жалюзи - тренд сезона')
+				.col
+					+chooseItem('images/choosejal.png', 'Экономию пространства', 'жалюзи можно установить в проем окна')
+					+chooseItem('images/choosejal.png', 'Защиту от посторонних взглядов', '')
+					+chooseItem('images/choosejal.png', 'Респектабельность', 'нанесение логотипа а контактных данных компании')
