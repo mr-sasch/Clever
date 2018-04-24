@@ -1,0 +1,37 @@
+mixin jalcount()
+	+b.jalcount&attributes(attributes)
+		block
+		.container
+			.row.flex-row.d-flex.d-sm-block
+				// Калькулятор
+				.col-12.col-sm-5.float-sm-left.col-lg-4
+					img(src='images/jal-count.png').jalcount__left-img
+				// Заголовок
+				.col-12.col-sm-12.col-lg-12
+					.row.justify-content-center
+						.col-12.col-lg-8
+							.jalcount__title
+								+titleSimple('Рассчитать стоимость жалюзи для ваших окон')
+								.title-note * жалюзи по вашим замерам - скидка 20%
+				// Форма
+				.col-12.col-sm-12.col-lg-12
+					.row.justify-content-center
+						.col-12.col-lg-8
+							mixin jalcountInput(title)
+								.jalcount__input-ttl= title
+								input(type='text').jalcount__input-inpt
+							.row.my-3
+								.col-12
+									+jalcountInput('Тип жалюзи')
+								.col-6
+									+jalcountInput('Высота, см')
+								.col-6
+									+jalcountInput('Ширина, см')
+								.col-6
+									+jalcountInput('Ваше имя')
+								.col-6
+									+jalcountInput('Номер телефона')
+								.col-12.my-2.align-items-center.flex-column.d-flex
+									.jalcount__note.mb-3 * Отправляя форму, Вы соглашаетесь с нашей 
+										div(style='text-decoration: underline;') политикой конфиденциальности
+									+headerBtn('Расчитать')

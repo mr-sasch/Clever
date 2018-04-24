@@ -2,15 +2,24 @@ extends /blocks/layout-default/layout-default
 include /blocks/1header/header
 include /blocks/2slider/slider
 include /blocks/3choosejal/choosejal
+include /blocks/4jal/jal
+include /blocks/5jalcount/jalcount
+include /blocks/6whyus/whyus
 
 
 block head
 	- var pageTitle = 'Clever | Landing Page';
 
 block content
-	// Хэдер
-	+header
-	// Слайдер
-	+slider
-	// Выбирая жалюзи вы получаете
-	+choosejal
+	//- // Хэдер
+	//- +header
+	//- // Слайдер
+	//- +slider
+	//- // Выбирая жалюзи вы получаете
+	//- +choosejal
+	//- // Жалюзи
+	//- +jal
+	// Расчитать стоимость жалюзи
+	+jalcount
+	// Почему стоит заказать жалюзи у нас
+	+whyus

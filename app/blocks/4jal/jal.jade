@@ -1,0 +1,45 @@
+mixin jal()
+	+b.jal.container&attributes(attributes)
+		block
+		mixin titleLeft(title)
+			.title-left
+				.title-left__title= title
+				.title-left__sep
+		+titleLeft('Жалюзи')
+		.row
+			.col-12.col-lg-3
+				mixin sideNav(i1, i2, i3, i4, i5, i6)
+					ul.side-nav
+						li.side-nav__li.active= i1
+						li.side-nav__li= i2
+						li.side-nav__li= i3
+						li.side-nav__li= i4
+						li.side-nav__li= i5
+						li.side-nav__li= i6
+				+sideNav('Горизонтальные жалюзи', 'Вертикальные жалюзи', 'Рулонные шторы', 'Фотожалюзи', 'Шторы-плиссе', 'Жалюзи с электроприводом')
+			.col
+				.jal__right.py-2
+					mixin titleSimple(title)
+						.title-simple= title
+					+titleSimple('Горизонтальные жалюзи')
+					.jal__right-txt
+						.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+						.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseOne") Смотреть весь текст
+						.jal__right-txt-more#collapseOne.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+					.row
+						mixin jalCard(img, ttl, price, btn)
+							.col-12.col-sm-6.col-lg-4.mb-4
+								.jal__card.d-flex.flex-column.justify-content-between
+									img(src= img).jal__card-img
+									.jal__card-title= ttl
+									.jal__card-price от 
+										.jal__card-price-num= price
+									.jal__card-more 
+										a(href='').jal__card-more-a Подробнее
+						+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
+						+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
+						+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
+						+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
+						+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
+						+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
+						
