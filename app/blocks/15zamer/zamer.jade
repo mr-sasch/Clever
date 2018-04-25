@@ -1,0 +1,15 @@
+mixin zamer()
+	+b.zamer&attributes(attributes)
+		block
+		.container
+			.title-big Запишитесь на 
+				strong бесплатный замер 
+				| и консультацию в удобное для Вас время
+			.row.justify-content-center
+				input(placeholder='Имя').getcat__input
+				input(placeholder='+7 (___) ___-__-__').getcat__input
+				input(placeholder='E-mail').getcat__input
+			.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
+					u политикой конфиденциальности
+			.getcat__btn
+				+headerBtn('Записаться')

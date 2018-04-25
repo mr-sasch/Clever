@@ -1,5 +1,5 @@
-mixin jalcount()
-	+b.jalcount&attributes(attributes)
+mixin karcount()
+	+b.karcount&attributes(attributes)
 		block
 		.container
 			.row.flex-row.d-flex.d-sm-block
@@ -11,21 +11,15 @@ mixin jalcount()
 					.row.justify-content-center
 						.col-12.col-lg-8
 							.jalcount__title
-								+titleSimple('Рассчитать стоимость жалюзи для ваших окон')
-								.title-note * жалюзи по вашим замерам - скидка 20%
+								+titleSimple('Рассчитать стоимость карниза для ваших окон')
 				// Форма
 				.col-12.order-3.col-sm-12.col-lg-12
 					.row.justify-content-center
 						.col-12.col-lg-8
-							mixin jalcountInput(title)
-								.jalcount__input-ttl= title
-								input(type='text').jalcount__input-inpt
 							.row.my-3
 								.col-12
-									+jalcountInput('Тип жалюзи')
-								.col-6
-									+jalcountInput('Высота, см')
-								.col-6
+									+jalcountInput('Тип карниза')
+								.col-12
 									+jalcountInput('Ширина, см')
 								.col-6
 									+jalcountInput('Ваше имя')

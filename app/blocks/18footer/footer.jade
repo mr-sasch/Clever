@@ -1,0 +1,41 @@
+mixin footer()
+	+b.footer&attributes(attributes)
+		block
+		.container
+			.row
+				.col-12.col-sm-7.col-lg-5
+					img(src='images/logo.jpg').footer__logo-img.mb-4
+					.footer__phones.footer__phones-1 +7 (123)
+						strong 456-78-90,
+					.footer__phones +7 (123)
+						strong 098-76-54
+					.footer__address г. Симферополь
+					.footer__time Пн-Пт: 9:00 до 18:00
+				.col-12.col-sm-5.col-lg-2
+					.footer__title Жалюзи
+					ul.footer__ul
+						li.footer__li - Горизонтальные жалюзи
+						li.footer__li - Вертикальные жалюзи
+						li.footer__li - Рулонные жалюзи
+						li.footer__li - Шторы-плиссе
+						li.footer__li - Жалюзи с электроприводом						
+				.col-12.col-sm-6.col-lg-2
+					.footer__title Карнизы
+					ul.footer__ul
+						li.footer__li - Раздвижные
+						li.footer__li - Подъемные
+						li.footer__li - для штор
+						li.footer__li - для жалюзи
+						li.footer__li - Зонирование помещений
+						li.footer__li - Установка и подключение электрокарнизов
+				.col-12.col-sm-6.col-lg-3
+					.footer__title Обратная связь
+					input(type-'text').footer__input
+					input(type-'text').footer__input
+					textarea(type-'textarea').footer__textarea
+					button(value='Отправить').footer__submit Отправить
+		.copyright__wrap
+			.container
+				.copyright
+					i.fa.fa-copyright
+					|  2018 Clever, Все права защищены.
