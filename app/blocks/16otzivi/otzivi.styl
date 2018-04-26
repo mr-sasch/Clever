@@ -1,2 +1,83 @@
+// Отзывы
 .otzivi
 	display block
+	background-color #fff
+.otzivi-slider-wrap
+	position relative
+// Отзывы - Слайдер
+	.slick-slider
+		position relative
+	arrowOffset = -70px // отступы стрелок
+	.slick-prev
+		position absolute
+		left arrowOffset
+		top 50%
+		transform translateY(-50%)
+	.slick-next
+		position absolute
+		right arrowOffset
+		top 50%
+		transform translateY(-50%)
+	.slick-arrow
+		width 50px
+		height 50px
+		background-color transparent
+		color transparent
+		border none
+	.slick-arrow:focus
+		outline none
+	.slick-arrow:after
+		position absolute
+		content ''
+		width 100%
+		height 100%
+		left 0
+		top 0
+		border-left 2px solid grey
+		border-top 2px solid grey
+	.slick-next:after
+		transform rotate(135deg)
+	.slick-prev:after
+		transform rotate(-45deg)
+@media screen and (max-width 550px)
+	.otzivi-slider-wrap
+		.slick-arrow
+			width 30px
+			height 30px
+		.slick-prev
+			left -30px
+		.slick-next
+			right -30px
+
+
+// Отзывы - Пагинация
+.otzivi-slider__pag
+	display flex
+	justify-content center
+	font-size 20px
+	margin-top 30px
+.otzivi-slider__iz
+	margin 0 4px
+
+
+
+	// /Отзывы - Слайдер
+
+.otzivi-slider-item
+	background-color lightgrey
+
+.otzivi-slider-item__left
+	height 223px
+	background-color grey
+
+.otzivi-slider-item__right-title
+	font-size 1.6em
+	margin-bottom .7em
+.otzivi-slider-item__right-city
+	margin-bottom .8em
+	font-style italic
+.otzivi-slider-item__right-text
+	font-style italic
+
+
+// /Отзывы
