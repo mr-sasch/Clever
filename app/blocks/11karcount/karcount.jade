@@ -1,5 +1,5 @@
 mixin karcount()
-	+b.karcount&attributes(attributes)
+	+b.karcount.py-5&attributes(attributes)
 		block
 		.container
 			.row.flex-row.d-flex.d-sm-block
@@ -28,4 +28,5 @@ mixin karcount()
 								.col-12.my-2.align-items-center.flex-column.d-flex
 									.jalcount__note.mb-3 * Отправляя форму, Вы соглашаетесь с нашей 
 										div(style='text-decoration: underline;') политикой конфиденциальности
-									+headerBtn('Рассчитать')
+									.jalcount__btn
+										+headerBtn('Рассчитать')

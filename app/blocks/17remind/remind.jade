@@ -2,14 +2,14 @@ mixin remind()
 	+b.remind&attributes(attributes)
 		block
 		.container
-			.title-big Напомнить мне позже
-				.row.justify-content-center
-					.col-12.col-md-7.title-big__note Напоминание о мероприятии придет на указанный номер телефона
-			.row.justify-content-center
-				input(placeholder='Время').getcat__input
-				input(placeholder='Дата').getcat__input
-				input(placeholder='+7 (___) ___-__-__').getcat__input
-			.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
-					u политикой конфиденциальности
-			.getcat__btn
-				+headerBtn('Заказать консультацию')
+			.d-flex.flex-column.align-items-center
+				.title-big Напомнить мне позже
+				.title-big__note.title-big__note-remind Напоминание о мероприятии придет на указанный номер телефона
+				.d-flex.justify-content-center.flex-wrap
+					input(placeholder='Время').getcat__input
+					input(placeholder='Дата').getcat__input
+					input(placeholder='+7 (___) ___-__-__').getcat__input
+				.getcat__note.remind__note * Отправляя форму, Вы соглашаетесь с нашей
+						u политикой конфиденциальности
+				.getcat__btn
+					+headerBtn('Заказать консультацию')

@@ -2,14 +2,14 @@ mixin consult()
 	+b.consult&attributes(attributes)
 		block
 		.container
-			.title-big Не знаете какие жалюзи/электрокарнизы выбрать?
-				.row.justify-content-center
-					.col-12.col-md-6.title-big__note Проконсультируйтесь у специалистов, оставьте номер телефона, и мы бесплатно вышлем электронный каталог.
-			.row.justify-content-center
-				input(placeholder='Имя').getcat__input
-				input(placeholder='+7 (___) ___-__-__').getcat__input
-				input(placeholder='E-mail').getcat__input
-			.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
-					u политикой конфиденциальности
-			.getcat__btn
-				+headerBtn('Заказать консультацию')
+			.row.flex-column.align-items-center
+				.title-big Не знаете какие жалюзи/электрокарнизы выбрать?
+				.title-big__note Проконсультируйтесь у специалистов, оставьте номер телефона, и мы бесплатно вышлем электронный каталог.
+				.d-flex.justify-content-center.flex-wrap
+					input(placeholder='Имя').getcat__input
+					input(placeholder='+7 (___) ___-__-__').getcat__input
+					input(placeholder='E-mail').getcat__input
+				.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
+						u политикой конфиденциальности
+				.getcat__btn
+					+headerBtn('Заказать консультацию')
