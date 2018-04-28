@@ -75,7 +75,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-  height: 5px;
+  height: 2px;
 }
 .noUi-horizontal .noUi-handle {
   width: 10px;
@@ -83,15 +83,32 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   left: -3px;
   top: -3px;
 }
+@media screen and (max-width: 576px) {
+  .noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    top: -7px;
+  }
+}
 .noUi-vertical {
-  width: 18px;
+  width: 2px;
 }
 .noUi-vertical .noUi-handle {
   width: 10px;
   height: 10px;
   left: -4px;
-  top: -5px;
+  top: -4px;
 }
+@media screen and (max-width: 576px) {
+  .noUi-vertical .noUi-handle {
+    width: 16px;
+    height: 16px;
+    left: -7px;
+    top: -8px;
+  }
+}
+
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   right: -5px;
   left: auto;
@@ -100,17 +117,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-  background: grey;
-  border-radius: 4px;
+  background: #aaa;
+  /* border-radius: 4px;
   border: 1px solid #D3D3D3;
-  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; */
+  border-radius: none;
+  border: none;
+  box-shadow: none;
 }
 .noUi-connects {
   border-radius: 3px;
   cursor: pointer;
 }
 .noUi-connect {
-  background: #3FB8AF;
+  background: #333;
 }
 /* Handles and cursors;
  */
@@ -212,7 +232,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 80px;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: calc(100% - 2px);
 }
 .noUi-value-horizontal {
   -webkit-transform: translate(-50%, 50%);
@@ -223,7 +243,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transform: translate(50%, 50%);
 }
 .noUi-marker-horizontal.noUi-marker {
-  margin-left: -1px;
+  /* margin-left: -1px; */
+  margin-left: 0;
   width: 2px;
   height: 5px;
 }
@@ -238,7 +259,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
  */
 .noUi-pips-vertical {
   padding: 0;
-  height: 100%;
+  height: calc(100% - 2px);
   top: 2px;
   left: 100%;
 }
@@ -286,3 +307,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   top: 50%;
   right: 120%;
 }
+
+/* Custom styles */
+.noUi-marker-normal {
+  display: none;
+}
+/* /Custom styles */

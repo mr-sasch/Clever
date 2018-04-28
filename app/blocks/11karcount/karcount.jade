@@ -4,8 +4,12 @@ mixin karcount()
 		.container
 			.row.flex-row.d-flex.d-sm-block
 				// Калькулятор
-				.col-12.order-2.col-sm-5.float-sm-left.col-lg-4
-					img(src='images/jal-count.png').jalcount__left-img
+				.jalcalc.col-12.order-2.col-sm-6.float-sm-left.col-lg-4
+					.jalcount__left-img-wrap-out.mt-4.mt-sm-1
+						.jalcount__left-img-wrap-inn
+							img(src='images/calc-window.png').jalcount__left-img
+							// Горизонтальный ползунок
+							.calc-horiz#karCalc
 				// Заголовок
 				.col-12.order-1.mb-3.col-sm-12.col-lg-12
 					.row.justify-content-center
@@ -20,7 +24,8 @@ mixin karcount()
 								.col-12
 									+jalcountInput('Тип карниза')
 								.col-12
-									+jalcountInput('Ширина, см')
+									.jalcount__input-ttl Высота, см
+									input(type='number' value='' style='text-align: center;').jalcount__input-inpt#karWidth
 								.col-6
 									+jalcountInput('Ваше имя')
 								.col-6

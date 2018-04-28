@@ -1,22 +1,23 @@
 // Горизонтальный слайдер
 
-var pipsSlider = document.getElementById('calc-horiz');
+var sliderHoriz = document.getElementById('calc-horiz');
 
-noUiSlider.create(pipsSlider, {
+noUiSlider.create(sliderHoriz, {
     range: {
         min: 0,
         max: 300
     },
-    step: 1,
-    start: [ 0 ],
+    step: .05,
+    start: [ 25 ],
+    connect: [true, false],
     pips: { mode: 'count', values: 5 }
 });
 
-var pips = pipsSlider.querySelectorAll('.noUi-value');
+var pips = sliderHoriz.querySelectorAll('.noUi-value');
 
 function clickOnPip ( ) {
     var value = Number(this.getAttribute('data-value'));
-    pipsSlider.noUiSlider.set(value);
+    sliderHoriz.noUiSlider.set(value);
 }
 
 for ( var i = 0; i < pips.length; i++ ) {
@@ -25,28 +26,88 @@ for ( var i = 0; i < pips.length; i++ ) {
     pips[i].style.cursor = 'pointer';
     pips[i].addEventListener('click', clickOnPip);
 }
+
+  // Активируем инпуты - Ширина
+  var inputNumberHor = document.getElementById('jalWidth');
+
+  sliderHoriz.noUiSlider.on('update', function( values, handle ) {
+
+  	var value = values[handle];
+    inputNumberHor.value = value;
+  });
+
+  inputNumberHor.addEventListener('change', function(){
+  	sliderHoriz.noUiSlider.set([null, this.value]);
+  });
+  // /Активируем инпуты - Ширина
 
 
 // Вертикальный слайдер
 
-var pipsSlider = document.getElementById('calc-vert');
+var sliderVert = document.getElementById('calc-vert');
 
-noUiSlider.create(pipsSlider, {
+noUiSlider.create(sliderVert, {
     range: {
         min: 0,
         max: 300
     },
-    start: [ 0 ],
+    start: [ 175 ],
+    connect: [true, false],
     pips: { mode: 'count', values: 5 },
     orientation: 'vertical',
+    step: .05,
     direction: 'rtl'
 });
 
-var pips = pipsSlider.querySelectorAll('.noUi-value');
+var pipsVert = sliderVert.querySelectorAll('.noUi-value');
+
+function clickOnPipVert ( ) {
+    var value = Number(this.getAttribute('data-value'));
+    sliderVert.noUiSlider.set(value);
+}
+
+for ( var i = 0; i < pipsVert.length; i++ ) {
+
+    // For this example. Do this in CSS!
+    pipsVert[i].style.cursor = 'pointer';
+    pipsVert[i].addEventListener('click', clickOnPipVert);
+}
+
+// Активируем инпуты - Высота
+var inputNumberVert = document.getElementById('jalHeight');
+
+sliderVert.noUiSlider.on('update', function( values, handle ) {
+
+  var value = values[handle];
+  inputNumberVert.value = value;
+});
+
+inputNumberVert.addEventListener('change', function(){
+  sliderVert.noUiSlider.set([null, this.value]);
+});
+// /Активируем инпуты - Высота
+
+
+// Слайдер - КАРНИЗЫ
+
+var karCalc = document.getElementById('karCalc');
+
+noUiSlider.create(karCalc, {
+    range: {
+        min: 0,
+        max: 300
+    },
+    step: .05,
+    start: [ 25 ],
+    connect: [true, false],
+    pips: { mode: 'count', values: 5 }
+});
+
+var pips = karCalc.querySelectorAll('.noUi-value');
 
 function clickOnPip ( ) {
     var value = Number(this.getAttribute('data-value'));
-    pipsSlider.noUiSlider.set(value);
+    karCalc.noUiSlider.set(value);
 }
 
 for ( var i = 0; i < pips.length; i++ ) {
@@ -55,3 +116,17 @@ for ( var i = 0; i < pips.length; i++ ) {
     pips[i].style.cursor = 'pointer';
     pips[i].addEventListener('click', clickOnPip);
 }
+
+  // Активируем инпуты - Ширина
+  var inputNumber = document.getElementById('karWidth');
+
+  karCalc.noUiSlider.on('update', function( values, handle ) {
+
+  	var value = values[handle];
+    inputNumber.value = value;
+  });
+
+  inputNumber.addEventListener('change', function(){
+  	karCalc.noUiSlider.set([null, this.value]);
+  });
+  // /Активируем инпуты - Ширина

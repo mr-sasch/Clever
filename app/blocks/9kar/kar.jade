@@ -5,22 +5,113 @@ mixin kar()
 			+titleLeft('Электрокарнизы')
 			.row
 				.col-12.col-md-4.col-lg-3
-					+sideNav('Раздвижные', 'Подъемные', 'Для штор', 'Для жалюзи', 'Зонирование помещений', 'Установка и подключение электрокарнизов')
+					mixin sideNavKar(i1, i2, i3, i4, i5, i6)
+						div.side-nav(class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical")
+							a.side-nav__li(class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#k1" role="tab" aria-controls="v-pills-home" aria-selected="true")= i1
+							a.side-nav__li(class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#k2" role="tab" aria-controls="v-pills-profile" aria-selected="false")= i2
+							a.side-nav__li(class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#k3" role="tab" aria-controls="v-pills-messages" aria-selected="false")= i3
+							a.side-nav__li(class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#k4" role="tab" aria-controls="v-pills-settings" aria-selected="false")= i4
+							a.side-nav__li(class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#k5" role="tab" aria-controls="v-pills-settings" aria-selected="false")= i5
+							a.side-nav__li(class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#k6" role="tab" aria-controls="v-pills-settings" aria-selected="false")= i6
+					+sideNavKar('Раздвижные', 'Подъемные', 'Для штор', 'Для жалюзи', 'Зонирование помещений', 'Установка и подключение электрокарнизов')
 				.col
 					.jal__right.py-2
-						+titleSimple('Раздвижные электрокарнизы')
-						.jal__right-img-row.clearfix
-							img(src='').jal__right-txt-img.float-left
-							ul.jal__right-ul
-								li.jal__right-li сочетаются с классическими шторами
-								li.jal__right-li надежная защита от солнца
-								li.jal__right-li отталкивают пыль
-							.jal__right-price.my-4 от
-								strong 9000 RUB
-							.jal__right-btn
-								+headerBtn('Заказать')
-						.jal__right-txt
-							.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
-							.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseTwo") Смотреть весь текст
-							.jal__right-txt-more#collapseTwo.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+						div(class="tab-content" id="pills-tabContent")
+							div(class="tab-pane fade show active" id="k1" role="tabpanel" aria-labelledby="pills-home-tab")
+								+titleSimple('Раздвижные электрокарнизы')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseTwo") Смотреть весь текст
+									.jal__right-txt-more#collapseTwo.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+							div(class="tab-pane fade" id="k2" role="tabpanel" aria-labelledby="pills-profile-tab")
+								+titleSimple('Подъемные электрокарнизы')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseKarTwo") Смотреть весь текст
+									.jal__right-txt-more#collapseKarTwo.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+							div(class="tab-pane fade" id="k3" role="tabpanel" aria-labelledby="pills-contact-tab")
+								+titleSimple('Карнизы для штор')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseKarThree") Смотреть весь текст
+									.jal__right-txt-more#collapseKarThree.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+							div(class="tab-pane fade" id="k4" role="tabpanel" aria-labelledby="pills-contact-tab")
+								+titleSimple('Карнизы для жалюзи')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseKarFour") Смотреть весь текст
+									.jal__right-txt-more#collapseKarFour.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+							div(class="tab-pane fade" id="k5" role="tabpanel" aria-labelledby="pills-contact-tab")
+								+titleSimple('Зонирование помещений')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseKarFive") Смотреть весь текст
+									.jal__right-txt-more#collapseKarFive.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+							div(class="tab-pane fade" id="k6" role="tabpanel" aria-labelledby="pills-contact-tab")
+								+titleSimple('Установка и подключение электрокарнизов')
+								.jal__right-img-row.clearfix
+									img(src='').jal__right-txt-img.float-left
+									ul.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										strong 9000 RUB
+									.jal__right-btn
+										+headerBtn('Заказать')
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseKarSix") Смотреть весь текст
+									.jal__right-txt-more#collapseKarSix.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+
 			
