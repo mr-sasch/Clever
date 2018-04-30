@@ -34,6 +34,19 @@ mixin header()
 							.header-nav__item.px-2.py-2.py-sm-1 Жалюзи
 							.header-nav__item.px-2.py-2.py-sm-1 Электрокарнизы
 						.header-button
-							mixin headerBtn(text)
-								button.header-btn= text
-							+headerBtn('Обратный звонок')
+							mixin headerBtn(text, modalId)
+								button.header-btn(data-toggle='modal' data-target= modalId)= text
+							+headerBtn('Обратный звонок', '#callBack')
+							mixin modalCallBack()
+								.modal.fade#callBack(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+									.modal-dialog.modal-dialog-centered(role="document")
+										.modal-content
+											.modal-header
+												h5.modal-title#exampleModalLongTitle Modal title
+												button.close(type="button" data-dismiss="modal" aria-label="Close")
+													span(aria-hidden="true") &times;
+											.modal-body выаывапывап
+											.modal-footer
+												button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+												button.btn.btn-primary(type="button") Save changes
+							+modalCallBack()

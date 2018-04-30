@@ -18,7 +18,7 @@ mixin jal()
 						a.side-nav__li(class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#i6" role="tab" aria-controls="v-pills-settings" aria-selected="false")= i6
 				+sideNav('Горизонтальные жалюзи', 'Вертикальные жалюзи', 'Рулонные шторы', 'Фотожалюзи', 'Шторы-плиссе', 'Жалюзи с электроприводом')
 			.col
-				.jal__right.py-2
+				.jal__right
 					// Миксин заголовка
 					mixin titleSimple(title)
 						.title-simple= title
@@ -34,80 +34,81 @@ mixin jal()
 									a(href='').jal__card-more-a Подробнее
 					div(class="tab-content" id="#i1")
 						div(class="tab-pane fade show active" id="i1" role="tabpanel" aria-labelledby="pills-home-tab")
-							+titleSimple('Горизонтальные жалюзи')
-							.jal__right-txt
-								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
-								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJalOne") Смотреть весь текст
-								.jal__right-txt-more#collapseJalOne.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
+							.row
 								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
+							+titleSimple('Горизонтальные жалюзи')
+							.jal__right-txt
+								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJalOne") Смотреть весь текст
+								.jal__right-txt-more#collapseJalOne.collapse
+									.jal__right-txt-more-wrap(style='padding-bottom: 30px;') Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 						div(class="tab-pane fade" id="i2" role="tabpanel" aria-labelledby="pills-profile-tab")
+							.row
+								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
+								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 							+titleSimple('Вертикальные жалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
 								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJal2") Смотреть весь текст
 								.jal__right-txt-more#collapseJal2.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
+						div(class="tab-pane fade" id="i3" role="tabpanel" aria-labelledby="pills-contact-tab")
+							.row
 								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
-						div(class="tab-pane fade" id="i3" role="tabpanel" aria-labelledby="pills-contact-tab")
 							+titleSimple('Рулонные жалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
 								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJal3") Смотреть весь текст
 								.jal__right-txt-more#collapseJal3.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
+						div(class="tab-pane fade" id="i4" role="tabpanel" aria-labelledby="pills-contact-tab")
+							.row
 								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
-						div(class="tab-pane fade" id="i4" role="tabpanel" aria-labelledby="pills-contact-tab")
 							+titleSimple('Фотожалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
 								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJal4") Смотреть весь текст
 								.jal__right-txt-more#collapseJal4.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
+						div(class="tab-pane fade" id="i5" role="tabpanel" aria-labelledby="pills-contact-tab")
+							.row
 								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
-						div(class="tab-pane fade" id="i5" role="tabpanel" aria-labelledby="pills-contact-tab")
 							+titleSimple('Шторы-плиссе')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
 								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJal5") Смотреть весь текст
 								.jal__right-txt-more#collapseJal5.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
+						div(class="tab-pane fade" id="i6" role="tabpanel" aria-labelledby="pills-contact-tab")
+							.row
 								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
-						div(class="tab-pane fade" id="i6" role="tabpanel" aria-labelledby="pills-contact-tab")
 							+titleSimple('Жалюзи с электроприводом')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
 								.jal__right-txt-more-btn(data-toggle="collapse" data-target="#collapseJal6") Смотреть весь текст
 								.jal__right-txt-more#collapseJal6.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-							.row.mt-4
-								+jalCard('img', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('img', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('img', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('img', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
-								+jalCard('img', 'Жалюзи из бамбука', '7000 RUB', 'btn')
