@@ -2,14 +2,21 @@
 
 // Шапка верхняя
 .header__top
-	color #fff
-	background-color grey
+	color txtGreyHeader
+	background-color clrBgGreyHeader
 	align-items center
 	font-weight 300
+	padding 5px 0
+
+.header-socials
+	color txtGreyHeader
+
+.header-icon-color
+	color headerIcons
 
 .header__top-item-separator
 	height 15px
-	border-left 1px solid #fff
+	border-left 1px solid headerIcons
 
 .header__top-item
 	position relative
@@ -17,16 +24,11 @@
 	position absolute
 	left 0
 	font-family FontAwesome
-.header__top-item-address:after
-	content '\f095'
-.header__top-item-clock:after
-	content '\f017'
-.header__top-item-phone:after
-	content '\f095'
 
 // Шапка нижняя
 .header__bottom
 	background-color #fff
+	max-height 70px
 .header-nav__item
 	font-weight 600
 
