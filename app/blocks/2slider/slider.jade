@@ -1,11 +1,39 @@
 mixin slider()
 	+b.slider.d-flex.align-items-center&attributes(attributes)
 		block
-		.container.mb-5
-			.slider__title Жалюзи и электрокарнизы
-				br
-				| От производителя в крыму
-			.slider__txt.py-4 Закажите замер до конца недели и получите скидку 10%
-			.slider__button
-				+headerBtn('Заказать замер')
-			
+		.container.h100p
+			.row.h100p
+				.col
+					.slider__text
+						.slider__title.font-bold Жалюзи и электрокарнизы
+						.slider__txt.font-light От производителя 
+							br
+							| по всему крыму
+				.col-4
+					.row.flex-column.h100p
+						.col
+							.slider-form
+								// Заголовок
+								.slider-form__title
+									.font-bold Закажите замер
+									.font-light до конца недели
+										br
+										| и получите
+										span.font-bold.c-orange скидку 10%
+								// Таймер
+								.slider__timer
+									.slider__timer-ttl
+									.slider__timer-count
+										.slider__timer-count-item
+											.slider__timer-count-item0m-num
+											.slider__timer-count-item0m-txt
+										.slider__timer-count-item
+											.slider__timer-count-item0m-num
+											.slider__timer-count-item0m-txt
+										.slider__timer-count-item
+											.slider__timer-count-item0m-num
+											.slider__timer-count-item0m-txt
+										.slider__timer-count-item
+											.slider__timer-count-item0m-num
+											.slider__timer-count-item0m-txt
+								

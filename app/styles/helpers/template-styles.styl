@@ -1,7 +1,38 @@
+// подключение шрифтов
+@font-face
+  font-family "Muller"
+  src url("../../fonts/MullerRegular.otf")
+  font-style normal
+  font-weight normal
+@font-face
+  font-family "MullerBold"
+  src url("../../fonts/MullerBold.otf")
+  font-style normal
+  font-weight normal
+@font-face
+  font-family "MullerLight"
+  src url("../../fonts/MullerLight.otf")
+  font-style normal
+  font-weight normal
+@font-face
+  font-family "MullerLightItalic"
+  src url("../../fonts/MullerLightItalic.otf")
+  font-style italic
+  font-weight normal
+
 body
   background-color #e4e4e4
-  // font-family 'Open Sans'
-  font-family 'Roboto'
+  font-family Muller, sans-serif
+
+// классы шрифтов
+.font-reg
+  font-family MullerRegular
+.font-bold
+  font-family MullerBold
+.font-light
+  font-family MullerLight
+.font-light-i
+  font-family MullerLightItalic
 
 // подсветка бордюров
 .brd
@@ -32,3 +63,11 @@ body
   padding 0 10px
 .pr10
   padding-right 10px
+
+// размеры
+.h100p
+  height 100%
+
+// цвета
+.c-orange
+  color txtMenuBtnOrange
