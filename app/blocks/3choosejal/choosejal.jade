@@ -3,25 +3,26 @@ mixin choosejal()
 		block
 		.container
 			mixin titleCenter(title)
-				.title-center= title
+				h1.title-center= title
 			+titleCenter('Выбирая жалюзи вы получаете:')
 			.row
 				.col
 					mixin chooseItem(img, title, text)
-						.choose-item.d-flex
+						.choose-item
 							.choose-item__img
-								img(src= img)
+								.choose-item__img-vert
+								img(src= img).choose-item__img-img
 							.choose-item__content
 								.choose-item__content-title= title
 								.choose-item__content-txt= text
-					+chooseItem('images/choosejal.png', 'Защиту от солнца', '')
-					+chooseItem('images/choosejal.png', 'Простоту ухода', 'просто протрите влажной тряпкой')
-					+chooseItem('images/choosejal.png', 'Элемент стиля', 'более 500 моделей, цветов и фактур, а также индивидуальные дизайны')
+					+chooseItem('images/cj-sun.png', 'Защиту от солнца', '')
+					+chooseItem('images/cj-charity.png', 'Простоту ухода', 'просто протрите влажной тряпкой')
+					+chooseItem('images/cj-style.png', 'Элемент стиля', 'более 500 моделей, цветов и фактур, а также индивидуальные дизайны')
 				.col
-					+chooseItem('images/choosejal.png', 'Регулирование освещения', 'в зависимости от яркости света')
-					+chooseItem('images/choosejal.png', 'долговечность', '')
-					+chooseItem('images/choosejal.png', 'Фотожалюзи', 'печать любого изображения на жалюзи - тренд сезона')
+					+chooseItem('images/cj-light.png', 'Регулирование освещения', 'в зависимости от яркости света')
+					+chooseItem('images/cj-time.png', 'долговечность', '')
+					+chooseItem('images/cj-photo.png', 'Фотожалюзи', 'печать любого изображения на жалюзи - тренд сезона')
 				.col
-					+chooseItem('images/choosejal.png', 'Экономию пространства', 'жалюзи можно установить в проем окна')
-					+chooseItem('images/choosejal.png', 'Защиту от посторонних взглядов', '')
-					+chooseItem('images/choosejal.png', 'Респектабельность', 'нанесение логотипа а контактных данных компании')
+					+chooseItem('images/cj-calc.png', 'Экономию пространства', 'жалюзи можно установить в проем окна')
+					+chooseItem('images/cj-hide.png', 'Защиту от посторонних взглядов', '')
+					+chooseItem('images/cj-suit.png', 'Респектабельность', 'нанесение логотипа а контактных данных компании')

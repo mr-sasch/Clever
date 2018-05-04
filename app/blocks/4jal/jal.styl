@@ -11,78 +11,130 @@
 
 .title-left__title
 	display inline-block
-	font-size 35px
+	font-size 36px
+	font-family MullerBold
+	color #00427b
 	text-transform uppercase
 
 .title-left__sep
 	margin-left 20px
 	width 100%
 	height 1px
-	border-bottom 2px solid grey
+	border-bottom 2px solid #bababa
 
 // Боковое меню
 .side-nav__li
-	margin-bottom 2px
 	padding 20px 15px
 	font-size 18px
-	background-color #fff
+	background-color #1a5588
+	border-bottom 2px solid #00427b
+.side-nav__li:last-child
+	border-bottom none
 .nav-pills .side-nav__li.nav-link.active, .nav-pills .show>.nav-link
 	color #fff
-	background-color grey
+	background-color #336895
+	border-left 8px solid #fff
 .nav-pills .side-nav__li.nav-link
-	color #808080
+	color #fff
 	border-radius 0
 // /Жалюзи заголовок Левый
+
+.jal__right-wrap
+	margin-left 30px
 
 // Заголовок обычный
 .title-simple
 	margin-bottom 25px
 	font-size 30px
+	color #333
 .jal__right-txt
-	line-height 25px
+	line-height 24px
+	color #555
+	font-size 14px
 
 // Смотреть весь текст
 .jal__right-txt-more-btn
+	position relative
+	color rgba(#000000, 0)
 	margin 15px 0
 	display inline-block
 	text-decoration none
 	cursor pointer
+	transition .2s ease
 .jal__right-txt-more-btn:hover
 	text-decoration underline
+.jal__right-txt-more-btn.collapsed
+	color #555555
+
+.jal__right-txt-more-btn.collapsed:before
+	content 'Свернуть'
+	color rgba(#000000, 0)
+	top 0
+	left 0
+	position absolute
+	transition .2s ease
+
+.jal__right-txt-more-btn:hover:before
+	text-decoration underline
+.jal__right-txt-more-btn:before
+	content 'Свернуть'
+	color #555
+	top 0
+	left 0
+	position absolute
 
 // Жалюзи карточка
 .jal__card
 	padding-bottom 10px
 	display flex
 	flex-direction column
-	height 100%
+	height 400px
 	background-color #fff
+	box-shadow 0px 0px 30px 0px rgba(0, 0, 0, 0.25)
+	transition .2s ease
+
+.jal__card:hover
+	box-shadow 0px 24px 30px 0px rgba(0, 0, 0, 0.35)
+	margin-top -10px
+
 .jal__card-img
 	margin-bottom 15px
 	width 100%
 	height 250px
 	background-color lightgrey
 .jal__card-title
+	padding 0 10px
+	font-size 14px
+	line-height 18px
 	margin-bottom 15px
 	text-align center
 	text-transform uppercase
+	color #222
 .jal__card-price
-	margin-bottom 15px
+	font-size 14px
+	line-height 18px
+	margin-bottom 5px
 	text-align center
+	color #666
 .jal__card-price-num
 	display inline-block
 	font-weight 600
+	color #00427b
 
 .jal__card-more
 	margin 20px 0
 	text-align center
 .jal__card-more-a
+	border 1px dashed #ff943d
 	padding 10px 20px
-	color grey
-	background-color lightgrey
+	color #ff943d
+	font-family MullerLight
+	background #fff
+	transition .2s ease
 .jal__card-more-a:hover
+	border 1px solid #ff943d
 	text-decoration none
-	color grey
-
+	color #fff
+	background linear-gradient(#ffb063, #fa4a2d)
 
 // /Жалюзи

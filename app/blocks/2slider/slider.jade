@@ -2,38 +2,42 @@ mixin slider()
 	+b.slider.d-flex.align-items-center&attributes(attributes)
 		block
 		.container.h100p
-			.row.h100p
-				.col
-					.slider__text
+			.row.h100p.flex-column.flex-md-row
+				.col-12.col-md
+					.slider__text.py-4
 						.slider__title.font-bold Жалюзи и электрокарнизы
 						.slider__txt.font-light От производителя 
 							br
 							| по всему крыму
-				.col-4
-					.row.flex-column.h100p
-						.col
-							.slider-form
-								// Заголовок
-								.slider-form__title
-									.font-bold Закажите замер
-									.font-light до конца недели
-										br
-										| и получите
-										span.font-bold.c-orange скидку 10%
-								// Таймер
-								.slider__timer
-									.slider__timer-ttl
-									.slider__timer-count
-										.slider__timer-count-item
-											.slider__timer-count-item0m-num
-											.slider__timer-count-item0m-txt
-										.slider__timer-count-item
-											.slider__timer-count-item0m-num
-											.slider__timer-count-item0m-txt
-										.slider__timer-count-item
-											.slider__timer-count-item0m-num
-											.slider__timer-count-item0m-txt
-										.slider__timer-count-item
-											.slider__timer-count-item0m-num
-											.slider__timer-count-item0m-txt
-								
+				.col-12.col-md-6.col-lg-4
+					.slider-form.h100p
+						// Заголовок
+						.slider-form__title
+							.font-bold Закажите замер
+							.font-light до конца недели
+								br
+								| и получите
+								span.font-bold.c-orange скидку 10%
+						// Таймер
+						.slider__timer
+							.slider__timer-ttl до конца акции:
+							// счетчик
+							.slider__timer-count
+								.slider__timer-count-item
+									.slider__timer-count-item-num 06
+									.slider__timer-count-item-txt дней
+								.slider__timer-count-item
+									.slider__timer-count-item-num 01
+									.slider__timer-count-item-txt часов
+								.slider__timer-count-item
+									.slider__timer-count-item-num 12
+									.slider__timer-count-item-txt минут
+								.slider__timer-count-item
+									.slider__timer-count-item-num 42
+									.slider__timer-count-item-txt секунд
+						// форма
+						form.slider__form
+							input(type='text' placeholder='Имя').slider__input
+							input(type='tel' placeholder='+7 (___) ___-__-__').slider__input
+							.slider__submit-wrap
+								button(type='submit').slider__submit.btn-simple Заказать замер

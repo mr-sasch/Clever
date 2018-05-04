@@ -20,19 +20,53 @@
 	height 1px
 	transform translateX(-50%)
 	content ''
-	border-bottom 2px solid grey
+	border-bottom 2px solid #bababa
 // /Заголовок центральный
 
 .choose-item
-	padding 40px 0
+	display flex
+	align-items stretch
+	height 159px
+	// padding 40px 0
 
 .choose-item__content-title
-	margin-top 25px
+	margin-top 40px
 	text-transform uppercase
-	font-size 20px
+	font-size 18px
+	line-height 24px
+	color #222
+.choose-item__content-txt
+	font-size 16px
+	color #666
+	line-height 18px
+	font-family MullerLight
 
 .choose-item__img
+	position relative
 	margin-right 10px
+.choose-item__img-img
+	position relative
+	z-index 20
 
+.choose-item__img-vert
+	position absolute
+	top 40px
+	left 50%
+	transform translateX(-50%)
+	z-index 10
+	height 100%
+	width 60px
+	background-color #e8e8e8
 
+.col .choose-item__img-vert:last-child
+	top inherit
+	bottom calc(100% - 20px)
+
+.col .choose-item:last-child  .choose-item__img-vert
+	display none
+
+	// адаптация
+@media screen and (max-width 375px)
+	.choose-item__content-title
+		font-size 17px	
 // /Выбирая жалюзи вы получаете
