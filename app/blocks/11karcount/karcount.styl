@@ -2,6 +2,25 @@
 
 .karcount
 	display block
-	background-color lightgrey
-
+	background-image url('../../images/karcount-img-bg.png')
+	background-size cover
+	background-position center
+	.noUi-target.calc-horiz
+		top 90px
+	.jalcount__left-img
+		margin-top 120px
+	// .noUi-value-horizontal
+	// 	bottom calc(100% + 50px)
+	// вертикальные штрихи
+	.noUi-marker-horizontal.noUi-marker-large
+		bottom 100%
+	.noUi-value
+		top -40px
+	.noUi-target.calc-horiz:before
+		bottom 55px
+	// адаптация
+@media screen and (max-width 768px)
+	.karcount
+		.jalcount__left-img-wrap-out
+			padding-left 0 !important
 // /Рассчитать стоимость карниза

@@ -7,30 +7,40 @@ mixin karcount()
 				.jalcalc.col-12.order-2.col-sm-6.float-sm-left.col-lg-4
 					.jalcount__left-img-wrap-out.mt-4.mt-sm-1
 						.jalcount__left-img-wrap-inn
-							img(src='images/calc-window.png').jalcount__left-img
+							img(src='images/jalcount-img-window.png').jalcount__left-img
 							// Горизонтальный ползунок
 							.calc-horiz#karCalc
 				// Заголовок
 				.col-12.order-1.mb-3.col-sm-12.col-lg-12
 					.row.justify-content-center
 						.col-12.col-lg-8
-							.jalcount__title
-								+titleSimple('Рассчитать стоимость карниза для ваших окон')
+							.jalcount__title Рассчитать стоимость карниза для ваших окон
 				// Форма
 				.col-12.order-3.col-sm-12.col-lg-12
 					.row.justify-content-center
 						.col-12.col-lg-8
-							.row.my-3
+							form#karCount.row.my-3
 								.col-12
-									+jalcountInput('Тип карниза')
+									.jalcount__input-ttl Тип карниза
+									select(name='jal-type' type='select' form='karCount').jalcount__input-inpt
+										option(value='goriz') Раздвижные
+										option(value='vert') Подъемные
+										option(value='rul') Для штор
+										option(value='foto') Для жалюзи
+										option(value='plisse') Зонирование помещений
+										option(value='electro') Установка и подключение электрокарнизов
 								.col-12
-									.jalcount__input-ttl Высота, см
+									.jalcount__input-ttl Ширина, см
 									input(type='number' value='' style='text-align: center;').jalcount__input-inpt#karWidth
 								.col-6
 									+jalcountInput('Ваше имя')
 								.col-6
-									+jalcountInput('Номер телефона')
+									.jalcount__input-ttl Номер телефона
+									input(type='text' placeholder='+7 (___) ___-__-__').jalcount__input-inpt
 								.col-12.my-2.align-items-center.flex-column.d-flex
-									.jalcount__note.mb-3 * Отправляя форму, Вы соглашаетесь с нашей 
+									.jalcount__note.my-3 
+										span(style='color: #ff7603') * 
+										| Отправляя форму, Вы соглашаетесь с нашей 
 										div(style='text-decoration: underline;') политикой конфиденциальности
 									.jalcount__btn
+										button(type='submit').btn-simple.slider__submit Рассчитать

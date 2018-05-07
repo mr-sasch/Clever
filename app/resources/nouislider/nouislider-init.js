@@ -8,7 +8,7 @@ noUiSlider.create(sliderHoriz, {
         max: 300
     },
     step: .05,
-    start: [ 300 ],
+    start: [ 250 ],
     connect: [true, false],
     pips: { mode: 'count', values: 5 }
 });

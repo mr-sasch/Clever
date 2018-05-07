@@ -26,19 +26,35 @@
 	margin-bottom 8px
 .jalcount__input-inpt
 	margin-bottom 15px
-	padding-left 7px
 	width 100%
 	height 35px
 	border none
+	background-color rgba(#ffffff, .2)
+	color #ccc
+	text-align center
+	option
+		color grey
+
+select.jalcount__input-inpt,
+#jalHeight,
+#jalWidth
+	padding-left 7px
+
+.jalcount__input-inpt:focus
+	background-color rgba(255, 255, 255, .6)
+	color #2f2f2f
 
 .jalcount__note
 	text-align center
+	color #bababa
 
 .jal-form
 	max-width 50%
 
 .jalcount__btn
 	width 200px
+	.slider__submit
+		margin-bottom 0
 
 .jalcalc
 	position relative
@@ -53,13 +69,29 @@
 
 .noUi-target.calc-vert
 	position absolute
-	top 0
+	top 50px
 	right calc(100% + 30px)
-	height 100%
+	height calc(100% - 50px)
 .noUi-target.calc-horiz
 	position absolute
 	top calc(100% + 30px)
 	width 100%
+
+.noUi-target.calc-vert:before
+	content 'Высота, см'
+	color #ddd
+	position absolute
+	top -50px
+	width 90px
+	text-align right
+
+.noUi-target.calc-horiz:before
+	content 'Ширина, см'
+	color #ddd
+	position absolute
+	bottom -70px
+	left 50%
+	transform translateX(-50%)
 
 #calc-vert
 	.noUi-pips-vertical
@@ -78,4 +110,9 @@
 .noUi-value-horizontal
 	top 11px
 
+
+// адаптация
+@media screen and (max-width 425px)
+	.noUi-target.calc-vert:before
+		right -27px
 // /Рассчитать стоимость жалюзи

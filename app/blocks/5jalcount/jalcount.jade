@@ -17,8 +17,7 @@ mixin jalcount()
 				.col-12.order-1.mb-3.col-sm-12.col-lg-12
 					.row.justify-content-center
 						.col-12.col-lg-8
-							.jalcount__title Рассчитать стоимость жалюзи 
-								span.font-light для ваших окон
+							.jalcount__title Рассчитать стоимость жалюзи для ваших окон
 							.title-note 
 								span(style='color: #ff7603;') * 
 								| жалюзи по вашим замерам - 
@@ -30,9 +29,16 @@ mixin jalcount()
 							mixin jalcountInput(title)
 								.jalcount__input-ttl= title
 								input(type='text').jalcount__input-inpt
-							.row.my-3
+							form#jalCount.row.my-3
 								.col-12
-									+jalcountInput('Тип жалюзи')
+									.jalcount__input-ttl Тип жалюзи
+									select(name='jal-type' type='select' form='jalCount').jalcount__input-inpt
+										option(value='goriz') Горизонтальные жалюзи
+										option(value='vert') Вертикальные жалюзи
+										option(value='rul') Рулонные жалюзи
+										option(value='foto') Фотожалюзи
+										option(value='plisse') Шторы-плиссе
+										option(value='electro') Жалюзи с электроприводом
 								.col-6
 									.jalcount__input-ttl Высота, см
 									input(type='number' value='' style='text-align: center;').jalcount__input-inpt#jalHeight
@@ -42,9 +48,12 @@ mixin jalcount()
 								.col-6
 									+jalcountInput('Ваше имя')
 								.col-6
-									+jalcountInput('Номер телефона')
+									.jalcount__input-ttl Номер телефона
+									input(type='text' placeholder='+7 (___) ___-__-__').jalcount__input-inpt
 								.col-12.my-2.align-items-center.flex-column.d-flex
-									.jalcount__note.mb-3 * Отправляя форму, Вы соглашаетесь с нашей 
+									.jalcount__note.my-3 
+										span(style='color: #ff7603') * 
+										| Отправляя форму, Вы соглашаетесь с нашей 
 										div(style='text-decoration: underline;') политикой конфиденциальности
 									.jalcount__btn
-										//- +headerBtn('Рассчитать')
+										button(type='submit').btn-simple.slider__submit Рассчитать
