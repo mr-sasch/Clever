@@ -7,7 +7,7 @@ mixin jalcount()
 				.jalcalc.col-12.order-2.col-sm-6.float-sm-left.col-lg-4
 					.jalcount__left-img-wrap-out.mt-4.mt-sm-1
 						.jalcount__left-img-wrap-inn
-							img(src='images/calc-window.png').jalcount__left-img
+							img(src='images/jalcount-img-window.png').jalcount__left-img
 							// Горизонтальный ползунок
 							.calc-horiz#calc-horiz
 							// Вертикальный ползунок
@@ -17,9 +17,12 @@ mixin jalcount()
 				.col-12.order-1.mb-3.col-sm-12.col-lg-12
 					.row.justify-content-center
 						.col-12.col-lg-8
-							.jalcount__title
-								+titleSimple('Рассчитать стоимость жалюзи для ваших окон')
-								.title-note * жалюзи по вашим замерам - скидка 20%
+							.jalcount__title Рассчитать стоимость жалюзи 
+								span.font-light для ваших окон
+							.title-note 
+								span(style='color: #ff7603;') * 
+								| жалюзи по вашим замерам - 
+								span(style='color: #ff7603;') скидка 20%
 				// Форма
 				.col-12.order-3.col-sm-12.col-lg-12
 					.row.justify-content-center
