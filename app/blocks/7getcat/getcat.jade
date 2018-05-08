@@ -3,14 +3,14 @@ mixin getcat()
 		block
 		.container
 			.d-flex.flex-column.align-items-center
-				.title-big Полную коллекцию жалюзи смотрите в нашем
-					strong бесплатном 
-					| каталоге
+				.title-big Полную коллекцию жалюзи смотрите в 
+					span.font-bold нашем каталоге
 				.d-flex.flex-wrap.align-items-center.justify-content-center
 					input(placeholder='Имя').getcat__input
 					input(placeholder='+7 (___) ___-__-__').getcat__input
 					input(placeholder='E-mail').getcat__input
-				.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
-						u политикой конфиденциальности
-				.getcat__btn
+				.getcat__note 
+					span.orange-star * 
+					| Отправляя форму, Вы соглашаетесь с нашей u политикой конфиденциальности
+				a.getcat__btn
 					+headerBtn('Получить каталог')

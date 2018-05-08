@@ -3,28 +3,29 @@ mixin choosekar()
 		block
 		.container
 			mixin titleCenter(title)
-				.title-center= title
+				h1.title-center= title
 			+titleCenter('Выбирая электрокарнизы вы получаете:')
 			.row
-				.col
+				.col.col1.choosejal-col
 					mixin chooseItem(img, title, text)
-						.choose-item.d-flex
+						.choose-item
 							.choose-item__img
-								img(src= img)
+								.choose-item__img-vert
+								img(src= img).choose-item__img-img
 							.choose-item__content
 								.choose-item__content-title= title
 								.choose-item__content-txt= text
-					+chooseItem('images/choosejal.png', 'Инновационный комфорт', 'современное решение для современной жизни')
-					+chooseItem('images/choosejal.png', 'Удобство использования', 'шторы без усилий сможет закрыть даже ребенок')
-					+chooseItem('images/choosejal.png', 'Возможность позаботиться о родителях', 'лучший подарок для родителей')
-					+chooseItem('images/choosejal.png', 'Идеальный выбор для бизнеса и отелей', 'респектабельность, повышение лояльности клиентов, автоматизация конференц-залов и офисов')
-				.col
-					+chooseItem('images/choosejal.png', 'Положительные эмоции', 'откройте штору, не вставая с постели!')
-					+chooseItem('images/choosejal.png', 'Отличное решение для домов', 'с большим количеством окон')
-					+chooseItem('images/choosejal.png', 'Любые формы и размеры', 'электрокарнизы от прямых до любых эркерных форм')
-					+chooseItem('images/choosejal.png', 'Электрокарнизы с "памятью"', 'настраивайте работу карниза так, как удобно вам')
-				.col
-					+chooseItem('images/choosejal.png', 'Сохранность штор', 'шторы не повреждаются при закрытии')
-					+chooseItem('images/choosejal.png', 'Универсальность', 'подходят для всех видов штор и жалюзи')
-					+chooseItem('images/choosejal.png', 'Легкое и стильное зонирование пространства', 'отделите часть комнаты плотными автоматическими перегородками')
-					+chooseItem('images/choosejal.png', 'Умная система', 'настройте автоматическую регулировку положения штор в зависимости от уровня освещенности')
+					+chooseItem('images/ck-innovations.png', 'Инновационный комфорт', 'современное решение для современной жизни')
+					+chooseItem('images/ck-hand.png', 'Удобство использования', 'шторы без усилий сможет закрыть даже ребенок')
+					+chooseItem('images/ck-people.png', 'Возможность позаботиться о родителях', 'лучший подарок для родителей')
+					+chooseItem('images/ck-building.png', 'Идеальный выбор для бизнеса и отелей', 'респектабельность, повышение лояльности клиентов, автоматизация конференц-залов и офисов')
+				.col.col2.choosejal-col
+					+chooseItem('images/ck-smile.png', 'Положительные эмоции', 'откройте штору, не вставая с постели!')
+					+chooseItem('images/ck-house.png', 'Отличное решение для домов', 'с большим количеством окон')
+					+chooseItem('images/ck-square.png', 'Любые формы и размеры', 'электрокарнизы от прямых до любых эркерных форм')
+					+chooseItem('images/ck-cpu.png', 'Электрокарнизы с "памятью"', 'настраивайте работу карниза так, как удобно вам')
+				.col.col3.choosejal-col
+					+chooseItem('images/ck-shield.png', 'Сохранность штор', 'шторы не повреждаются при закрытии')
+					+chooseItem('images/ck-arrow.png', 'Универсальность', 'подходят для всех видов штор и жалюзи')
+					+chooseItem('images/ck-divide.png', 'Легкое и стильное зонирование пространства', 'отделите часть комнаты плотными автоматическими перегородками')
+					+chooseItem('images/ck-brain.png', 'Умная система', 'настройте автоматическую регулировку положения штор в зависимости от уровня освещенности')

@@ -2,27 +2,65 @@ mixin myths()
 	+b.myths.py-5&attributes(attributes)
 		block
 		.container
-			+titleCenter('Мифы о жалюзи')
+			.title-center
+				span.orange-myth Мифы 
+				| о жалюзи
 			.row.align-items-stretch
 				.col-12.col-md-6.my-3
-					mixin myth(ttl, txt)
-						.myths__item
-							.myths__item-top.clearfix
-								.myths__item-left
-									img(src='images/myth.png').myths__item-left-img
-								.myths__item-right.pt-1= ttl
-							.myths__item-bottom.clearfix
-								.myths__item-left
-									img(src='images/myth-answer.png').myths__item-left-img
-								.myths__item-right= txt
-					+myth('Жалюзи быстро сломаются', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качествам опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Жалюзи быстро сломаются
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt - Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качество подтверждено сертификатами качества.
+								br
+								span.font-bold Предоставляем гарантию 2 года.
 				.col-12.col-md-6.my-3
-					+myth('Жалюзи - это дорого', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Жалюзи - это дорого
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt – Цены на жалюзи сопоставимы с ценой обычных штор. Кроме того, у нас представлен широкий диапазон цен, и 
+								span.font-bold мы подберем жалюзи на любой бюджет.
 				.col-12.col-md-6.my-3
-					+myth('Долго ждать', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Долго ждать
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt - 
+								span.font-bold Изготовление жалюзи занимает 5-7 дней 
+								| в зависимости от загруженности цеха.
 				.col-12.col-md-6.my-3
-					+myth('Жалюзи собирают пыль', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Жалюзи собирают пыль
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt – Современные жалюзи покрыты специальным покрытием «антипыль», которое уменьшает загрязнение изделия. Кроме того, наши жалюзи 
+								span.font-bold имеют сертификаты соответствия санитарно-эпидемиологическим и гигиеническим требованиям. 
 				.col-12.col-md-6.my-3
-					+myth('Установка повредит интерьер', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Установка повредит интерьер
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt - 
+								span.font-bold Наши установщики аккуратные и опытные,  
+								| бережно относятся к помещению заказчика.
 				.col-12.col-md-6.my-3
-					+myth('Проще купить готовые', '- Мы используем только качественные материалы и комплектующие. Гарантируем опыт и профессионализм монтажников. Высокое качесвтво подтверждено сертификатами качества. Предоставляем гарантию 2 года.')
+					.myths__item
+						.myths__item-top
+							img(src='images/myth-ques.png').myths__item-top-img
+							.myths__item-right Проще купить готовые
+						.myths__item-bottom
+							img(src='images/myth-thumb.png').myths__item-left-img
+							.myths__item-right.myths__item-right-txt - 
+								span.font-bold Индивидуальный заказ дает возможность получить жалюзи по желаемым параметрам 
+								| - размеру, цвету, фактуре.

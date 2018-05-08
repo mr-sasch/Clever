@@ -2,15 +2,16 @@ mixin zamer()
 	+b.zamer&attributes(attributes)
 		block
 		.container
-			.row.flex-column.align-items-center
+			.d-flex.flex-column.align-items-center
 				.title-big Запишитесь на 
-					strong бесплатный замер 
+					span.font-bold бесплатный замер 
 					| и консультацию в удобное для Вас время
 				.d-flex.justify-content-center.flex-wrap
 					input(placeholder='Имя').getcat__input
 					input(placeholder='+7 (___) ___-__-__').getcat__input
 					input(placeholder='E-mail').getcat__input
-				.getcat__note * Отправляя форму, Вы соглашаетесь с нашей
-						u политикой конфиденциальности
-				.getcat__btn
+				.getcat__note 
+					span.orange-star * 
+					| Отправляя форму, Вы соглашаетесь с нашей u политикой конфиденциальности
+				a.getcat__btn
 					+headerBtn('Записаться')

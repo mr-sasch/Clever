@@ -27,8 +27,9 @@
 .choose-item
 	display flex
 	align-items stretch
-	height 159px
+	// height 159px
 	// padding 40px 0
+
 
 .choose-item__content-title
 	margin-top 40px
@@ -59,14 +60,33 @@
 	width 60px
 	background-color #e8e8e8
 
-.col .choose-item__img-vert:last-child
-	top inherit
-	bottom calc(100% - 20px)
+.choosejal-col
 	.choose-item__img-vert
+		top 50px
+		bottom 0
+
+	.choose-item:last-child .choose-item__img-vert
 		display none
+
 
 	// адаптация
 @media screen and (max-width 375px)
 	.choose-item__content-title
 		font-size 17px
+
+.choosejal
+	.choose-item
+		min-height 140px
+
+@media screen and (max-width 992px)
+	.choosekar
+		.col3
+			.choose-item
+				height inherit
+@media screen and (max-width 767px)
+	.choosekar
+		.col1
+		.col2
+			.choose-item
+				height inherit
 // /Выбирая жалюзи вы получаете
