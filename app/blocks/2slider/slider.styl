@@ -1,11 +1,10 @@
 // Слайдер
 .slider
 	display block
-	// height 750px
-	background-color lightgrey
-	color #fff
 	font-size 30px
+	color #fff
 	text-transform uppercase
+	background-color lightgrey
 	background-image url(../../images/slider.png)
 	background-size cover
 
@@ -13,21 +12,21 @@
 	max-width 180px
 
 .slider__text
-	height 100%
 	display flex
 	flex-direction column
 	justify-content center
+	height 100%
 	line-height 40px
 
 // форма в слайдере
 .slider-form
-	background-color rgba(#000000, .5)
-	height 100%
+	padding 20px 30px
 	display flex
 	flex-direction column
 	justify-content center
+	height 100%
 	text-align center
-	padding 20px 30px
+	background-color rgba(#000000, .5)
 
 .slider-form__title
 	margin-bottom 40px
@@ -37,11 +36,11 @@
 
 	// таймер
 .slider__timer-count
-	background linear-gradient(rgba(#000000, 0), rgba(#000000, .3))
-	padding 10px 20px
 	margin-bottom 10px
+	padding 10px 20px
 	display flex
 	justify-content space-between
+	background linear-gradient(rgba(#000000, 0), rgba(#000000, .3))
 
 .slider__timer-count-item
 	display inline-block
@@ -52,8 +51,8 @@
 	text-align center
 .slider__timer-count-item-num
 	margin-bottom 3px
-	font-size 30px
 	font-family MullerLight
+	font-size 30px
 .slider__timer-count-item-txt
 	font-size 14px
 	color #969696
@@ -62,24 +61,24 @@
 .slider__input,
 .slider__submit
 	margin 10px 0
-	width 100%
 	padding 11px
+	width 100%
 	font-size 17px
-	color #c8c8c8
 	text-align center
+	color #c8c8c8
 
 .slider__input
-	background-color rgba(#ffffff, 0.2)
-	border none
 	color #c8c8c8
+	background-color rgba(#ffffff, .2)
+	border none
 .slider__input::placeholder
 	color #c8c8c8
 
 
 .slider__submit
-	color #fff
 	margin 30px 0
 	height 45px
+	color #fff
 	box-shadow 0 5px 40px 0 rgba(0, 0, 0, .4)
 
 .btn-simple

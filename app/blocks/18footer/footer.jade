@@ -3,39 +3,62 @@ mixin footer()
 		block
 		.container
 			.row
-				.col-12.col-sm-7.col-lg-5.my-4
-					img(src='images/logo-mono.png').footer__logo-img.mb-4
-					.footer__phones.footer__phones-1 +7 (123)
-						strong 456-78-90,
-					.footer__phones +7 (123)
-						strong 098-76-54
-					.footer__address г. Симферополь
-					.footer__time Пн-Пт: 9:00 до 18:00
-				.col-12.col-sm-5.col-lg-2.my-4
+				.col-12.col-md-6.col-lg-3.mb-3
+					img(src='images/logo-grey.png').footer__logo-img.mb-4
+					.footer-text Постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, реализация намеченных плановых заданий в значительной степени обуславливает создание развития.
+				.col-12.col-md-6.col-lg-3.mt-3
 					.footer__title Жалюзи
 					ul.footer__ul
-						li.footer__li - Горизонтальные жалюзи
-						li.footer__li - Вертикальные жалюзи
-						li.footer__li - Рулонные жалюзи
-						li.footer__li - Шторы-плиссе
-						li.footer__li - Жалюзи с электроприводом						
-				.col-12.col-sm-6.col-lg-2.my-4
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Горизонтальные жалюзи
+						a(href='#jaluzi').footer__ul-a
+							li.footer__li - Вертикальные жалюзи
+						a(href='#jaluzi').footer__ul-a
+							li.footer__li - Рулонные жалюзи
+						a(href='#jaluzi').footer__ul-a
+							li.footer__li - Шторы-плиссе
+						a(href='#jaluzi').footer__ul-a
+							li.footer__li - Жалюзи с электроприводом
+				.col-12.col-md-6.col-lg-3.mt-3
 					.footer__title Карнизы
 					ul.footer__ul
-						li.footer__li - Раздвижные
-						li.footer__li - Подъемные
-						li.footer__li - для штор
-						li.footer__li - для жалюзи
-						li.footer__li - Зонирование помещений
-						li.footer__li - Установка и подключение электрокарнизов
-				.col-12.col-sm-6.col-lg-3.mb-5
-					.footer__title Обратная связь
-					input(type-'text').footer__input
-					input(type-'text').footer__input
-					textarea(type-'textarea').footer__textarea
-					button(value='Отправить').footer__submit Отправить
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Раздвижные
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Подъемные
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Для штор
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Для жалюзи
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Зонирование помещений
+						a(href='#karnizi').footer__ul-a
+							li.footer__li - Установка и подключение электрокарнизов
+				.col-12.col-md-6.col-lg-3.mt-3
+					.footer__title Контакты
+					.footer-contacts
+						.f-cont.footer__phones
+							i.f-icon(class="fas fa-phone")
+							| +7 (123) 
+							span.font-bold.c-white 456-78-90,
+							br
+							| +7 (123) 
+							span.font-bold.c-white 098-76-54
+						.f-cont.footer__mail info@clever.by
+							i.f-icon(class="fas fa-envelope")
+						.f-cont.footer__address г. Севастополь
+							i.f-icon(class="fas fa-map-marker-alt")
+						.f-cont.footer__time Круглосуточно
+							i.f-icon(class="fas fa-clock")
+						.footer__socials
+							.footer__socials-title Мы в соц. сетях:
+							.footer__socials-cntnt
+								a.footer-soc-a(href='https://vk.com' target="_blank")
+									i.footer__socials-item(class="fab fa-vk")
+								a.footer-soc-a(href='https://www.instagram.com' target="_blank")
+									i.footer__socials-item(class="fab fa-instagram")
 		.copyright__wrap
 			.container
 				.copyright
-					i.fa.fa-copyright
+					i(class="far fa-copyright")
 					|  2018 Clever, Все права защищены.

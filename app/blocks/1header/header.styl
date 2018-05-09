@@ -10,10 +10,12 @@
 	font-size 14px
 
 .header-socials
-	color txtGreyHeader
+	font-size 20px
+	color #b0b0b0
 
 .header-icon-color
-	color headerIcons
+	font-size 16px
+	color #b0b0b0
 
 .header__top-item-separator
 	height 15px
@@ -28,10 +30,33 @@
 
 // Шапка нижняя
 .header__bottom
+	position relative
+	z-index 1000
 	background-color #fff
+	box-shadow 0 5px 40px 0 rgba(0, 0, 0, .4)
+
+.header__bottom-fixed
+	position fixed
+	top 0
+	width 100%
+	background-color #fff
+
+
+
+
 
 .header__btn-jal
 	border-right 1px solid #dddddd
+
+.header__btn-jal:hover
+	font-family MullerBold
+	text-decoration none
+	color txtMenuBtnOrange
+.header__btn-kar:hover
+	font-family MullerBold
+	text-decoration none
+	color txtMenuBtnOrange
+
 @media screen and (max-width 992px)
 	.header__btn-jal
 		border-right 0
@@ -47,19 +72,20 @@
 .header__btn-kar,
 .header__btn-jal
 	text-transform uppercase
-	color txtMenuBtn
+	color #404040
 
 .header__btn.active
-	color txtMenuBtnOrange
 	font-family MullerBold
+	color txtMenuBtnOrange
 
 .header__btn
+	font-family MullerBold
 	font-size 18px
-	// height 69px
+	transition .2s ease
 
 .header__btn-callback
-	background linear-gradient(#1673c4, #00427b);
-	color #fff
 	font-family MullerLight
+	color #fff
+	background linear-gradient(#1673c4, #00427b)
 
 // /Шапка

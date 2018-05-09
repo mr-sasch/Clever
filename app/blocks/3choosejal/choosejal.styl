@@ -3,6 +3,8 @@
 	padding 70px 0
 	display block
 	background-color #fff
+	.choose-item
+		min-height 140px
 
 // Заголовок центральный
 .title-center
@@ -38,10 +40,10 @@
 	line-height 24px
 	color #222
 .choose-item__content-txt
-	font-size 16px
-	color #666
-	line-height 18px
 	font-family MullerLight
+	font-size 16px
+	line-height 18px
+	color #666
 
 .choose-item__img
 	position relative
@@ -52,12 +54,12 @@
 
 .choose-item__img-vert
 	position absolute
+	z-index 10
 	top 40px
 	left 50%
-	transform translateX(-50%)
-	z-index 10
-	height 100%
 	width 60px
+	height 100%
+	transform translateX(-50%)
 	background-color #e8e8e8
 
 .choosejal-col
@@ -68,15 +70,10 @@
 	.choose-item:last-child .choose-item__img-vert
 		display none
 
-
 	// адаптация
 @media screen and (max-width 375px)
 	.choose-item__content-title
 		font-size 17px
-
-.choosejal
-	.choose-item
-		min-height 140px
 
 @media screen and (max-width 992px)
 	.choosekar
