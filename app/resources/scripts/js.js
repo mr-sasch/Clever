@@ -20,13 +20,6 @@ window.onload = function() {
       headerBottom.classList.remove('header__bottom-fixed');
     }
   }
-
-  // Якоря для блоков жалюзей и карнизов
-  var mainBlocksTop = height - 2*height,
-  karnizi = document.getElementById('karniziAnchor'),
-  jaluzi = document.getElementById('jaluziAnchor');
-  karnizi.style.top = mainBlocksTop - 70 + 'px';
-  jaluzi.style.top = mainBlocksTop - 70 + 'px';
 }
 
 // Активные кнопки меню
@@ -38,3 +31,58 @@ karBtn.onclick = function() {
   karBtn.classList.add('active');
   jalBtn.classList.remove('active');
 }
+topLogo.onclick = function() {
+  karBtn.classList.remove('active');
+  jalBtn.classList.remove('active');
+}
+
+// Прокрутка при нажатии на кнопки
+$(document).ready(function(){
+
+  $("#jalBtn").click(function(e){
+    e.preventDefault();
+    var id = $(this).attr("href");
+    var headerBottomPosition = getComputedStyle(headerBottom).position;
+    var headerBottomHeight = headerBottom.offsetHeight;
+    var offset = $(id).offset();
+
+    if (headerBottomPosition != 'fixed') {
+      $("html, body").animate({
+        scrollTop: offset.top - headerBottomHeight
+      }, 500);
+    } else {
+      $("html, body").animate({
+        scrollTop: offset.top
+      }, 500);
+    }
+  });
+
+  $("#karBtn").click(function(e){
+    e.preventDefault();
+    var id = $(this).attr("href");
+    var headerBottomPosition = getComputedStyle(headerBottom).position;
+    var headerBottomHeight = headerBottom.offsetHeight;
+    var offset = $(id).offset();
+
+    if (headerBottomPosition != 'fixed') {
+      $("html, body").animate({
+        scrollTop: offset.top - headerBottomHeight
+      }, 500);
+    } else {
+      $("html, body").animate({
+        scrollTop: offset.top
+      }, 500);
+    }
+  });
+
+  $("#topLogo").click(function(e){
+    e.preventDefault();
+
+    var id = $(this).attr("href");
+    var offset = $(id).offset();
+
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 500);
+  });
+});

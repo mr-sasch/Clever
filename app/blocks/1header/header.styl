@@ -35,15 +35,39 @@
 	background-color #fff
 	box-shadow 0 5px 40px 0 rgba(0, 0, 0, .4)
 
+// Фиксируем шапку
+.header__logo
+	width 233px
+	transition .2s ease
 .header__bottom-fixed
 	position fixed
 	top 0
 	width 100%
 	background-color #fff
+	.header__btn
+		padding 16px 0
+	.header__btn.header__btn-kar,
+	.header__btn.header__btn-jal
+		text-transform uppercase
+		color #404040
+		padding-top 17px
+		padding-bottom 15px
+	.header__logo
+		width 160px
+@media screen and (max-width 992px)
+	.header__logo
+		width 233px
+	.header__bottom-fixed
+		.header__logo
+			width 233px
+@media screen and (max-width 576px)
+	.header__logo
+		width 160px
+	.header__bottom-fixed
+		.header__logo
+			width 160px
 
-
-
-
+// /Фиксируем шапку
 
 .header__btn-jal
 	border-right 1px solid #dddddd
@@ -65,27 +89,49 @@
 		position absolute
 		top 5px
 		left 15px
+		width 233px
+		transition .2s ease
 @media screen and (max-width 576px)
 	.header__btn-col
 		padding 0
 
-.header__btn-kar,
-.header__btn-jal
+.header__btn.header__btn-kar,
+.header__btn.header__btn-jal
 	text-transform uppercase
 	color #404040
+	padding-top 27px
+	padding-bottom 25px
 
-.header__btn.active
+@media screen and (max-width 992px)
+	.header__btn.header__btn-kar,
+	.header__bottom-fixed .header__btn.header__btn-kar
+		padding-top 5px
+		padding-bottom 5px
+	.header__btn.header__btn-jal,
+	.header__bottom-fixed .header__btn.header__btn-jal
+		padding-top 15px
+		padding-bottom 5px
+
+.header__btn-lnks.active,
+.header__bottom-fixed .header__btn-lnks.active,
+.header__btn-lnks:hover,
+.header__bottom-fixed .header__btn-lnks:hover
 	font-family MullerBold
 	color txtMenuBtnOrange
 
 .header__btn
+	padding 26px 0
 	font-family MullerBold
 	font-size 18px
 	transition .2s ease
+@media screen and (max-width 375px)
+	.header__btn
+		font-size 14px
 
 .header__btn-callback
 	font-family MullerLight
 	color #fff
 	background linear-gradient(#1673c4, #00427b)
+	cursor pointer
 
 // /Шапка

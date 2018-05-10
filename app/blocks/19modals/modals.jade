@@ -1,0 +1,63 @@
+mixin modals()
+	+b.modals&attributes(attributes)
+		block		
+		// Обратный звонок
+		.modal.fade.call-back#callBack(tabindex="-1" role="dialog" aria-hidden="true")
+			.modal-dialog.modal-dialog-centered(role="document")
+				.modal-content
+					.modal-header
+						img(src='images/modals-cancel.png' data-dismiss="modal" aria-label="Close").modal-close
+						h5.modal-title Обратная связь
+						.modal-comment Оставьте ваши контактные данные в форме ниже, и наш менеджер сам перезвонит вам, и ответит на все вопросы.
+					form#callBack.modal-body
+						.callback__input
+							input(type='text' name='callbackName' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
+							label(for='callbackName').callback-label Имя
+						.callback__input
+							input(type='text' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
+							label(for='callbackName').callback-label Телефон
+						button(type='submit').callback__input-submit Отправить
+		
+		// Заказать замер
+		.modal.fade.call-back#order(tabindex="-1" role="dialog" aria-hidden="true")
+			.modal-dialog.modal-dialog-centered(role="document")
+				.modal-content
+					.modal-header
+						img(src='images/modals-cancel.png' data-dismiss="modal" aria-label="Close").modal-close
+						h5.modal-title Заказать замер
+						.modal-comment Оставьте ваши контактные данные в форме ниже, и наш менеджер сам перезвонит вам, и ответит на все вопросы.
+					form#order.modal-body
+						.callback__input
+							input(type='text' name='orderName' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
+							label(for='orderName').callback-label Имя
+						.callback__input
+							input(type='text' name='orderPhone' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
+							label(for='orderPhone').callback-label Телефон
+						button(type='submit').callback__input-submit Отправить
+		
+		// Подробнее
+		.modal.modal-details.fade#details(tabindex="-1" role="dialog" aria-hidden="true")
+			.modal-dialog.modal-dialog-centered(role="document")
+				.modal-content
+					.modal-header
+						img(src='images/modals-cancel.png' data-dismiss="modal" aria-label="Close").modal-close
+					.modal-body#details
+						+titleSimple('Пластиковые горизонтальные шторы')
+						.container
+							.row.jal__right-img-row
+								.col-4.modal-jal-img
+								.col
+									ul.col.jal__right-ul
+										li.jal__right-li сочетаются с классическими шторами
+										li.jal__right-li надежная защита от солнца
+										li.jal__right-li отталкивают пыль
+									.jal__right-price.my-4 от
+										span.kar-price-blue 9000 RUB
+									a.jal__right-btn(data-toggle="modal" data-target="#order")
+										+headerBtn('Заказать')
+							.row
+								.jal__right-txt
+									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
+									.jal__right-txt-more#collapseKarOne.collapse 
+										.jal__right-txt-more-wrap Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+									.jal__right-txt-more-btn.collapsed(data-toggle="collapse" data-target="#collapseKarOne") Смотреть весь текст

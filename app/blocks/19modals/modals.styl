@@ -1,0 +1,119 @@
+// Модальные окна
+
+// Обратная связь + общие стили
+.modals
+	display block
+
+.modal-header .close
+	border none
+	padding 0
+.modal-close
+	position absolute
+	width 26px
+	height 26px
+	top -30px
+	right -30px
+	opacity 1
+	background url('../../images/modals-cancel.png')
+	background-size cover
+	background-position center
+	border none
+
+@media screen and (max-width 576px)
+	.modal-close
+		top -40px
+		right 0
+.modal-title
+	font-size 30px
+	line-height 48px
+	color #0f6b98
+	text-transform uppercase
+	font-family MullerBold
+	text-align center
+	width 100%
+	padding-top 10px
+	padding-bottom 20px
+
+@media screen and (max-width 375px)
+	.modal-title
+		font-size 26px
+
+.modal-header
+	border-bottom none
+	flex-direction column
+	text-align center
+	align-items center
+	padding-bottom 0
+
+.modal-content
+	padding-bottom 20px
+	border-radius 0
+	align-items center
+
+.modal-comment
+	font-family MullerLight
+	font-size 14px
+	line-height 16px
+	max-width 400px
+
+.callback__input
+	position relative
+	margin-top 25px
+	input
+		height 40px
+		padding-left 10px
+		width 100%
+
+.modal-body
+	width 100%
+	max-width 300px
+
+.callback__input-submit
+	width 100%
+	border none
+	background-color #1a96d4
+	height 40px
+	color #fff
+	margin-top 25px
+	font-size 18px
+	font-family MullerLight
+
+.callback-label
+	font-family MullerLight
+	font-size 16px
+	line-height 18px
+	color #a9a9a9
+	margin-bottom 3px
+	position absolute
+	bottom 5px
+	left 10px
+	transition .2s ease
+
+.callback__input-nput:focus
+	border 1px solid #1a96d4
+	~.callback-label
+		bottom 38px
+		left 0
+		color #1a96d4
+.callback__input-nput:not([value=""])~.callback-label
+	bottom 38px
+	left 0
+	color #1a96d4
+
+	// Подробнее
+.modal-details
+	.modal-dialog,
+	.modal-body
+		max-width 920px
+
+.modal-jal-img
+	width 100%
+	height 283px
+	background url(../../images/kar.png)
+	background-position center
+	background-size cover
+
+
+
+
+// Модальные окна

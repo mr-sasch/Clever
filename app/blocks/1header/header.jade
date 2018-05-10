@@ -33,14 +33,14 @@ mixin header()
 							.fab.fa-instagram.py-1.header-socials
 		// Хэдер нижний
 		.header__bottom#headerBottom
-			.container.h100p
+			.container
 				.row
-					a(href='#').col-12.col-sm-6.col-lg-4.d-flex.align-items-center.justify-content-center.pt-3.pt-lg-0
-						img(src='images/logo.png').header__logo.mb-3.mb-lg-0
-					.col-12.col-sm-6.px-sm-auto.col-lg-8.header__btn-col
+					a#topLogo(href='#header__top').col-6.col-sm-6.col-lg-4.d-flex.align-items-center.justify-content-center
+						img(src='images/logo.png').header__logo.mb-1.mb-sm-3.mb-lg-0.mt-2.mt-lg-0
+					.col-6.col-sm-6.px-sm-auto.col-lg-8.header__btn-col
 						.d-flex.flex-column.flex-lg-row.justify-content-lg-end
-							a(href='#jaluziAnchor')#jalBtn.px-4.header__btn.header__btn-jal.active.d-flex.align-items-center.justify-content-center.py-3.pt-sm-4.pb-sm-2.py-lg-0 Жалюзи
-							a(href='#karniziAnchor')#karBtn.px-4.header__btn.header__btn-kar.d-flex.align-items-center.justify-content-center.py-3 Электрокарнизы
-							.px-4.header__btn.header__btn-callback.d-flex.align-items-center.justify-content-center.py-4 Обратный звонок
+							a(href='#jaluziAnchor')#jalBtn.px-4.header__btn.header__btn-lnks.header__btn-jal.active.d-flex.align-items-center.justify-content-center Жалюзи
+							a(href='#karniziAnchor')#karBtn.px-4.header__btn.header__btn-lnks.header__btn-kar.d-flex.align-items-center.justify-content-center Электрокарнизы
+							.px-4.header__btn.header__btn-callback.d-none.d-sm-flex.align-items-center.justify-content-center(data-toggle="modal" data-target="#callBack") Обратный звонок
 			mixin headerBtn(txt)
 				.btn-simple= txt
