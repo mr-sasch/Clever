@@ -33,7 +33,7 @@ mixin modals()
 						.callback__input
 							input(type='text' name='orderPhone' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
 							label(for='orderPhone').callback-label Телефон
-						button(type='submit' data-toggle="modal" data-target="#thnx").callback__input-submit Отправить
+						button(type='submit' data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#thnx").callback__input-submit Отправить
 		
 		// Подробнее
 		.modal.modal-details.fade#details(tabindex="-1" role="dialog" aria-hidden="true")

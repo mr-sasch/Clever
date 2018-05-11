@@ -24,9 +24,9 @@
 		color transparent
 		background-color transparent
 		border none
-	.slick-arrow:focus
+	.slick-arrow focus
 		outline none
-	.slick-arrow:after
+	.slick-arrow after
 		position absolute
 		top 0
 		left 0
@@ -35,9 +35,9 @@
 		content ''
 		border-top 2px solid grey
 		border-left 2px solid grey
-	.slick-next:after
+	.slick-next after
 		transform rotate(135deg)
-	.slick-prev:after
+	.slick-prev after
 		transform rotate(-45deg)
 @media screen and (max-width 550px)
 	.otzivi-slider-wrap
@@ -76,5 +76,65 @@
 .otzivi-slider-item__right-text
 	font-style italic
 
+// *
+.otzivi-slider__current, .otzivi-slider__total
+	color #00427b
+
+.otzivi-slider .slick-arrow
+	opacity .5
+	transition .3s
+
+.otzivi-slider .slick-arrow:hover
+	opacity 1
+	transition .2s
+
+.otzivi-slider-item
+	background #ebebeb
+	padding 15px
+	margin 0 15px
+	padding-bottom 30px
+	border-bottom 4px solid #00427b
+
+.otzivi-slider-item__top-img
+	height 80px
+	width 80px
+	overflow hidden
+	border-radius 40px
+	background-position center
+	background-size cover
+	display inline-block
+	float left
+	margin-right 15px
+	margin-bottom 20px
+
+.otzivi-slider-item__top-title
+	color #00427b
+	font-size 1.1em
+	display inline-block
+	line-height 1.4em
+	margin-top 20px
+
+.otzivi-slider-item__top-city
+	color #a8a8a8
+	font-size .9em
+	font-style italic
+	display inline-block
+
+.otzivi-slider-item__bottom-text
+	color #555
+	line-height 1.2em
+	font-style italic
+
+.otzivi
+	button.slick-prev
+		transform rotate(-45deg)
+	button.slick-next
+		transform rotate(135deg)
+	.slick-arrow
+		top 43%
+		border-top 2px solid
+		border-left 2px solid
+		border-color #000
+		outline none
 
 // /Отзывы

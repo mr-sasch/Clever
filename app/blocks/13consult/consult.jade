@@ -3,7 +3,7 @@ mixin consult()
 		block
 		.container
 			.d-flex.flex-column.align-items-center
-				.title-big Не знаете какие жалюзи/электрокарнизы выбрать?
+				.title-big.font-bold Не знаете какие жалюзи/электрокарнизы выбрать?
 				.title-big__note Проконсультируйтесь у специалистов, оставьте номер телефона, и мы бесплатно вышлем электронный каталог.
 				.d-flex.justify-content-center.flex-wrap
 					input(placeholder='Имя').getcat__input
@@ -12,5 +12,5 @@ mixin consult()
 				.getcat__note
 					span.orange-star * 
 					| Отправляя форму, Вы соглашаетесь с нашей u политикой конфиденциальности
-				a.getcat__btn
+				a.getcat__btn(data-toggle='modal' data-target='#thnx')
 					+headerBtn('Заказать консультацию')

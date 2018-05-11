@@ -1,0 +1,58 @@
+// Фото с производства
+.photo
+	display block
+	overflow hidden
+	background white
+
+.photo-slider-wrap
+	overflow-x hidden
+
+.photo-slider-item
+	position relative
+	img
+		width auto
+		height 300px
+
+@media screen and (max-width 768px)
+	.photo-slider-item img
+		width auto
+		height 200px
+
+
+.photo-slider-item:before
+	position absolute
+	top 0
+	left 0
+	display block
+	width 100%
+	height 100%
+	content ''
+	background #3e7cab
+	opacity 0
+	transition .3s
+
+.photo-slider-item:hover:before
+	opacity .4
+	transition .2s
+
+.photo-slider-item:after
+	display inline-block
+	font normal normal normal 14px/1 FontAwesome
+	text-rendering auto
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	position absolute
+	top 50%
+	left 50%
+	opacity 0
+	font-size 30px
+	color #fff
+	transform translate(-50%, -50%)
+	transition .3s
+	content '\f00e'
+
+.photo-slider-item:hover:after
+	opacity 1
+	transition .2s
+
+// /Фото с производства

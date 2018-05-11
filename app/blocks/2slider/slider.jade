@@ -3,6 +3,8 @@ mixin slider()
 		block
 		.container.h100p
 			.row.h100p.flex-column.flex-md-row
+				video#slider__video(autoplay muted loop)
+					source(src="video/videoplayback_clever.mp4" type="video/mp4")
 				.col-12.col-md
 					.slider__text.py-4
 						.slider__title.font-bold Жалюзи и электрокарнизы
@@ -22,22 +24,23 @@ mixin slider()
 						.slider__timer
 							.slider__timer-ttl до конца акции:
 							// счетчик
-							.slider__timer-count
+							input#datefortimer(type="hidden" value="2018-05-20")
+							.slider__timer-count#timer
 								.slider__timer-count-item
-									.slider__timer-count-item-num 06
+									.slider__timer-count-item-num.days
 									.slider__timer-count-item-txt дней
 								.slider__timer-count-item
-									.slider__timer-count-item-num 01
+									.slider__timer-count-item-num.hours
 									.slider__timer-count-item-txt часов
 								.slider__timer-count-item
-									.slider__timer-count-item-num 12
+									.slider__timer-count-item-num.minutes
 									.slider__timer-count-item-txt минут
 								.slider__timer-count-item
-									.slider__timer-count-item-num 42
+									.slider__timer-count-item-num.seconds
 									.slider__timer-count-item-txt секунд
 						// форма
 						form.slider__form
 							input(type='text' placeholder='Имя').slider__input
 							input(type='tel' placeholder='+7 (___) ___-__-__').slider__input
 							.slider__submit-wrap
-								button(type='submit').slider__submit.btn-simple Заказать замер
+								button(type='submit' data-toggle='modal' data-target='#thnx').slider__submit.btn-simple Заказать замер
