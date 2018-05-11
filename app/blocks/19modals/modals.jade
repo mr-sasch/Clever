@@ -16,7 +16,7 @@ mixin modals()
 						.callback__input
 							input(type='text' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
 							label(for='callbackName').callback-label Телефон
-						button(type='submit').callback__input-submit Отправить
+						button(type='submit' data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#thnx").callback__input-submit Отправить
 		
 		// Заказать замер
 		.modal.fade.call-back#order(tabindex="-1" role="dialog" aria-hidden="true")
@@ -33,7 +33,7 @@ mixin modals()
 						.callback__input
 							input(type='text' name='orderPhone' onkeyup="this.setAttribute('value', this.value);" value='').callback__input-nput
 							label(for='orderPhone').callback-label Телефон
-						button(type='submit').callback__input-submit Отправить
+						button(type='submit' data-toggle="modal" data-target="#thnx").callback__input-submit Отправить
 		
 		// Подробнее
 		.modal.modal-details.fade#details(tabindex="-1" role="dialog" aria-hidden="true")
@@ -41,23 +41,57 @@ mixin modals()
 				.modal-content
 					.modal-header
 						img(src='images/modals-cancel.png' data-dismiss="modal" aria-label="Close").modal-close
-					.modal-body#details
+					.modal-body
 						+titleSimple('Пластиковые горизонтальные шторы')
 						.container
 							.row.jal__right-img-row
-								.col-4.modal-jal-img
-								.col
+								.col-5.modal-jal-img
+								.col.col-modal-jal-right
 									ul.col.jal__right-ul
 										li.jal__right-li сочетаются с классическими шторами
 										li.jal__right-li надежная защита от солнца
 										li.jal__right-li отталкивают пыль
 									.jal__right-price.my-4 от
 										span.kar-price-blue 9000 RUB
-									a.jal__right-btn(data-toggle="modal" data-target="#order")
+									a.jal__right-btn(data-toggle="modal" data-target="#order" data-dismiss="modal" aria-label="Close")
 										+headerBtn('Заказать')
 							.row
 								.jal__right-txt
 									.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
-									.jal__right-txt-more#collapseKarOne.collapse 
+									.jal__right-txt-more#modalMore.collapse 
 										.jal__right-txt-more-wrap Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-									.jal__right-txt-more-btn.collapsed(data-toggle="collapse" data-target="#collapseKarOne") Смотреть весь текст
+									.jal__right-txt-more-btn.collapsed(data-toggle="collapse" data-target="#modalMore") Смотреть весь текст
+									
+		// Спасибо за покупку
+		.modal.modal-details.fade#thnx(tabindex="-1" role="dialog" aria-hidden="true")
+			.modal-dialog.modal-dialog-centered(role="document")
+				.modal-content
+					.modal-header
+						img(src='images/modals-cancel.png' data-dismiss="modal" aria-label="Close").modal-close
+					.modal-body
+						.container
+							.thnx-title
+								+titleSimple('Добрый день!')
+							.thnx-content
+								img(src='images/modal-thnx.png').thnx-content__img.float-right
+								| Меня зовут 
+								span.font-bold Владимир Жмур
+								| , я основатель компании "КЛЕВЕР".
+								br
+								| Я искренне рад, что Вы решили сделать у нас заказ. Как только мы приедем к Вам, сделаем замер, изготовим заказ и доставим его Вам, Вы станете владельцем выбранного Вами товара, и убедитесь, что это было лучшее решение.
+								br
+								.thnx-separ
+								span.font-bold Почему я в этом уверен? 
+								br
+								| Ведь я сам часто являюсь клиентом различных фирм и совершаю покупки в интернете. И я знаю, как легко попасть на различные уловки и получить совсем не то, чего ожидаешь.
+								br
+								.thnx-separ
+								span.font-bold Мы решили это исправить. 
+								| Наша компания имеет высокую оценку клиентов за качество продукта, и мы даем гарантию 2 года на жалюзи и 3 года на электрокарнизы. На нашу работу гарантия бессрочная!
+								br
+								.thnx-separ
+								span.font-bold Поэтому добро пожаловать в новый мир ответственного сервиса! 
+								| Ах да, когда мы привезем Ваш заказ, обязательно заберите небольшой подарок у нашего сотрудника.
+								br
+								| Это нечто особенное! Договорились?
+								.thnx-separ

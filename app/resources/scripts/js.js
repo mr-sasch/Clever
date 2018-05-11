@@ -75,6 +75,42 @@ $(document).ready(function(){
     }
   });
 
+  $(".footer__kar-lnk").click(function(e){
+    e.preventDefault();
+    var id = $(this).attr("href");
+    var headerBottomPosition = getComputedStyle(headerBottom).position;
+    var headerBottomHeight = headerBottom.offsetHeight;
+    var offset = $(id).offset();
+
+    if (headerBottomPosition != 'fixed') {
+      $("html, body").animate({
+        scrollTop: offset.top - headerBottomHeight
+      }, 500);
+    } else {
+      $("html, body").animate({
+        scrollTop: offset.top
+      }, 500);
+    }
+  });
+
+  $(".footer__jal-lnk").click(function(e){
+    e.preventDefault();
+    var id = $(this).attr("href");
+    var headerBottomPosition = getComputedStyle(headerBottom).position;
+    var headerBottomHeight = headerBottom.offsetHeight;
+    var offset = $(id).offset();
+
+    if (headerBottomPosition != 'fixed') {
+      $("html, body").animate({
+        scrollTop: offset.top - headerBottomHeight
+      }, 500);
+    } else {
+      $("html, body").animate({
+        scrollTop: offset.top
+      }, 500);
+    }
+  });
+
   $("#topLogo").click(function(e){
     e.preventDefault();
 
