@@ -24,11 +24,10 @@ mixin jal()
 					mixin titleSimple(title)
 						.title-simple= title
 					// Миксин карточки
-					mixin jalCard(ttl, price, btn)
+					mixin jalCard(img, ttl, price, btn)
 						.col-12.col-sm-6.col-lg-4.mb-5
 							.jal__card.d-flex.flex-column.justify-content-between
-								.jal__card-img(style='background-image: url("images/jalcard-img1.png")')
-								//- img(src= img).jal__card-img
+								.jal__card-img(style= img)
 								.jal__card-title= ttl
 								.jal__card-price от 
 									.jal__card-price-num= price
@@ -37,11 +36,11 @@ mixin jal()
 					div(class="tab-content" id="#i1")
 						div(class="tab-pane fade show active" id="i1" role="tabpanel" aria-labelledby="pills-home-tab")
 							.row
-								+jalCard('Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Жалюзи из бамбука', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-goriz-plast.jpg")', 'Пластиковые горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-goriz-al.jpg")', 'Алюминиевые горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-horiz-wood.jpg")', 'Деревянные горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-goriz-cassette.jpg")', 'Кассетные горизонтальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-goriz-bambuk.jpg")', 'Жалюзи из бамбука', '7000 RUB', 'btn')
 							+titleSimple('Горизонтальные жалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview 
@@ -60,9 +59,9 @@ mixin jal()
 								.jal__right-txt-more-btn.collapsed(data-toggle="collapse" data-target="#collapseJalOne") Смотреть весь текст
 						div(class="tab-pane fade" id="i2" role="tabpanel" aria-labelledby="pills-profile-tab")
 							.row
-								+jalCard('Тканевые вертикальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Мультифактурные вертикальные жалюзи', '7000 RUB', 'btn')
-								+jalCard('Пластиковые вертикальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-vertic-tkan.jpg")', 'Тканевые вертикальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-vertic-multi.jpg")', 'Мультифактурные вертикальные жалюзи', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-vertic-plast.jpg")', 'Пластиковые вертикальные жалюзи', '7000 RUB', 'btn')
 							+titleSimple('Вертикальные жалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
@@ -70,9 +69,9 @@ mixin jal()
 								.jal__right-txt-more#collapseJal2.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 						div(class="tab-pane fade" id="i3" role="tabpanel" aria-labelledby="pills-contact-tab")
 							.row
-								+jalCard('Тканевые рулонные шторы', '7000 RUB', 'btn')
-								+jalCard('Рулонные шторы День-ночь', '7000 RUB', 'btn')
-								+jalCard('Рулонные шторы Зебра', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-rul-tkan.jpg")', 'Тканевые рулонные шторы', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-rul-day.jpg")', 'Рулонные шторы День-ночь', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-rul-zebra.jpg")', 'Рулонные шторы Зебра', '7000 RUB', 'btn')
 							+titleSimple('Рулонные жалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
@@ -80,10 +79,10 @@ mixin jal()
 								.jal__right-txt-more#collapseJal3.collapse Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 						div(class="tab-pane fade" id="i4" role="tabpanel" aria-labelledby="pills-contact-tab")
 							.row
-								+jalCard('Фотожалюзи с 3D-печатью', '7000 RUB', 'btn')
-								+jalCard('Фотожалюзи рулонные', '7000 RUB', 'btn')
-								+jalCard('Фотожалюзи вертикальные', '7000 RUB', 'btn')
-								+jalCard('Фотожалюзи кассетные', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-photo-3d.jpg")', 'Фотожалюзи с 3D-печатью', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-photo-rul.jpg")', 'Фотожалюзи рулонные', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-photo-vert.jpg")', 'Фотожалюзи вертикальные', '7000 RUB', 'btn')
+								+jalCard('background-image: url("images/cat-photo-cassette.jpg")', 'Фотожалюзи кассетные', '7000 RUB', 'btn')
 							+titleSimple('Фотожалюзи')
 							.jal__right-txt
 								.jal__right-txt-preview Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus.
