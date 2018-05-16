@@ -211,3 +211,34 @@ responsive: [
   }
 ]
 });
+
+// Подсветка текущей позиции (жалюзи/карнизы)
+$(window).on('load', function() {
+	//Scroll menu toggle active
+	$(window).on('scroll resize',function(){
+	    jaluziAnchor = $("#jaluziAnchor").offset().top;
+	    karniziAnchor = $("#karniziAnchor").offset().top;
+	    s_top = $(window).scrollTop()+50;
+
+	    if(s_top > jaluziAnchor){
+	        $('.header__btn-lnks').removeClass('active');
+	        $('#jalBtn').addClass('active');
+	    }
+	    if(s_top > karniziAnchor){
+	        $('.header__btn-lnks').removeClass('active');
+	        $('#karBtn').addClass('active');
+	    }
+	    if(s_top < jaluziAnchor){
+	    	$('.header__btn-lnks').removeClass('active');
+	    }
+
+	});
+
+});
+
+
+// Инициация AOS
+AOS.init({
+    duration: 500,
+    once: true
+  });

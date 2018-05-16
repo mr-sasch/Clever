@@ -5,12 +5,12 @@ mixin slider()
 			.row.h100p.flex-column.flex-md-row
 				video#slider__video(autoplay muted loop)
 					source(src="video/videoplayback_clever.mp4" type="video/mp4")
-				.col-12.col-md
-					.slider__text.py-4
-						.slider__title.font-bold Жалюзи и электрокарнизы
-						.slider__txt.font-light От производителя 
-							br
-							| по всему крыму
+				.col-12.col-md.row.flex-column.justify-content-center
+					.slider__text.pt-4.pb-2
+						.slider__txt-wrapper
+							.slider__coub
+							.slider__title.font-bold.aos-init(data-aos='fade-right') Жалюзи и электрокарнизы
+							.slider__txt.font-light.aos-init(data-aos='fade-right') От производителя по всему крыму
 				.col-12.col-md-6.col-lg-4
 					.slider-form.h100p
 						// Заголовок

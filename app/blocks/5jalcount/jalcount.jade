@@ -41,10 +41,10 @@ mixin jalcount()
 										option(value='electro') Жалюзи с электроприводом
 								.col-6
 									.jalcount__input-ttl Высота, см
-									input(type='number' value='' style='text-align: center;').jalcount__input-inpt#jalHeight
+									input(type='number' step='.10' value='' style='text-align: center;').jalcount__input-inpt#jalHeight
 								.col-6
 									.jalcount__input-ttl Ширина, см
-									input(type='number' value='' style='text-align: center;').jalcount__input-inpt#jalWidth
+									input(type='number' step='.10' value='' style='text-align: center;').jalcount__input-inpt#jalWidth
 								.col-6
 									+jalcountInput('Ваше имя')
 								.col-6

@@ -7,7 +7,7 @@ noUiSlider.create(sliderHoriz, {
         min: 0,
         max: 300
     },
-    step: .05,
+    step: .10,
     start: [ 250 ],
     connect: [true, false],
     pips: { mode: 'count', values: 5 }
@@ -37,7 +37,7 @@ for ( var i = 0; i < pips.length; i++ ) {
   });
 
   inputNumberHor.addEventListener('change', function(){
-  	sliderHoriz.noUiSlider.set([null, this.value]);
+  	sliderHoriz.noUiSlider.set([this.value, null]);
   });
   // /Активируем инпуты - Ширина
 
@@ -55,7 +55,7 @@ noUiSlider.create(sliderVert, {
     connect: [true, false],
     pips: { mode: 'count', values: 5 },
     orientation: 'vertical',
-    step: .05,
+    step: .10,
     direction: 'rtl'
 });
 
@@ -83,7 +83,7 @@ sliderVert.noUiSlider.on('update', function( values, handle ) {
 });
 
 inputNumberVert.addEventListener('change', function(){
-  sliderVert.noUiSlider.set([null, this.value]);
+  sliderVert.noUiSlider.set([this.value, null]);
 });
 // /Активируем инпуты - Высота
 
@@ -97,7 +97,7 @@ noUiSlider.create(karCalc, {
         min: 0,
         max: 300
     },
-    step: .05,
+    step: .10,
     start: [ 25 ],
     connect: [true, false],
     pips: { mode: 'count', values: 5 }
@@ -127,6 +127,6 @@ for ( var i = 0; i < pips.length; i++ ) {
   });
 
   inputNumber.addEventListener('change', function(){
-  	karCalc.noUiSlider.set([null, this.value]);
+  	karCalc.noUiSlider.set([this.value, null]);
   });
   // /Активируем инпуты - Ширина
