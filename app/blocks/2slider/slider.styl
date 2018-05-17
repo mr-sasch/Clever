@@ -6,6 +6,8 @@
 	font-size 30px
 	color #fff
 	text-transform uppercase
+	z-index 20
+	overflow hidden
 @media screen and (max-width 1100px)
 	.slider
 		height auto
@@ -49,10 +51,27 @@
 	justify-content center
 	height 50%
 	line-height 40px
-	margin-left -35px
-	padding-left 35px
 	background-color rgba(208, 208, 208, .2)
 	max-width 710px
+	min-height 290px
+@media screen and (max-width 767px)
+	.slider__title
+		font-size 1.2em !important
+	.slider__txt
+		font-size 1em !important
+@media screen and (max-width 424px)
+	.slider__title
+		font-size 1em !important
+	.slider__txt
+		line-height .9em !important
+		margin-top 10px
+@media screen and (max-width 374px)
+	.slider__title
+		font-size .8em !important
+		margin-top 10px
+	.slider__txt
+		font-size .9em !important
+		margin-top 20px
 
 .slider__txt-wrapper
 	position relative
@@ -151,12 +170,15 @@
 	color #fff
 	box-shadow 0 5px 40px 0 rgba(0, 0, 0, .4)
 
+
 .btn-simple
 	color #fff
 	background linear-gradient(#ffb063, #fa4a2d)
 	border none
 .btn-simple:focus
 	outline none
+.btn-simple:hover
+	background linear-gradient(#f58c26, #f58c26)
 
 	// адаптация
 @media screen and (max-width 375px)

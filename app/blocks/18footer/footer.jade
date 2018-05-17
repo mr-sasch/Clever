@@ -3,10 +3,35 @@ mixin footer()
 		block
 		.container
 			.row
-				.col-12.col-md-6.col-lg-3.mb-3
-					img(src='images/logo-grey.png').footer__logo-img.mb-4
-					.footer-text Постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, реализация намеченных плановых заданий в значительной степени обуславливает создание развития.
-				.col-12.col-md-6.col-lg-3.mt-3
+				.col-12.col-md-6.col-lg-3.mt-3.mb-4
+					.footer__title Контакты
+					.footer-contacts
+						.f-cont.footer__phones
+							i.f-icon(class="fas fa-phone")
+							| +7 (978) 
+							span.font-bold.c-white 055-19-09,
+							br
+							| +7 (978) 
+							span.font-bold.c-white 090-41-31,
+							br
+							| +7 (915) 
+							span.font-bold.c-white 259-77-17
+						.f-cont.footer__mail info@clever.by
+							i.f-icon(class="fas fa-envelope")
+						.f-cont.footer__address г. Севастополь, 
+							br
+							| ул. Курганная,  6
+							i.f-icon(class="fas fa-map-marker-alt")
+						.f-cont.footer__time Пн-Пт: 9:00 до 18:00
+							i.f-icon(class="fas fa-clock")
+						.footer__socials
+							.footer__socials-title Мы в соц. сетях:
+							.footer__socials-cntnt
+								a.footer-soc-a(href='https://vk.com' target="_blank")
+									i.footer__socials-item(class="fab fa-vk")
+								a.footer-soc-a(href='https://www.instagram.com' target="_blank")
+									i.footer__socials-item(class="fab fa-instagram")
+				.col-12.col-md-6.col-lg-3.my-3
 					.footer__title Жалюзи
 					ul.footer__ul
 						a(href='#jaluziAnchor').footer__ul-a.footer__jal-lnk
@@ -34,36 +59,12 @@ mixin footer()
 							li.footer__li - Зонирование помещений
 						a(href='#karniziAnchor').footer__ul-a.footer__kar-lnk
 							li.footer__li - Установка и подключение электрокарнизов
-				.col-12.col-md-6.col-lg-3.mt-3
-					.footer__title Контакты
-					.footer-contacts
-						.f-cont.footer__phones
-							i.f-icon(class="fas fa-phone")
-							| +7 (978) 
-							span.font-bold.c-white 055-19-09,
-							br
-							| +7 (978) 
-							span.font-bold.c-white 090-41-31,
-							br
-							| +7 (915) 
-							span.font-bold.c-white 259-77-17
-						.f-cont.footer__mail info@clever.by
-							i.f-icon(class="fas fa-envelope")
-						.f-cont.footer__address г. Севастополь, 
-							br
-							| ул. Курганая,  6
-							i.f-icon(class="fas fa-map-marker-alt")
-						.f-cont.footer__time Пн-Пт: 9:00 до 18:00
-							i.f-icon(class="fas fa-clock")
-						.footer__socials
-							.footer__socials-title Мы в соц. сетях:
-							.footer__socials-cntnt
-								a.footer-soc-a(href='https://vk.com' target="_blank")
-									i.footer__socials-item(class="fab fa-vk")
-								a.footer-soc-a(href='https://www.instagram.com' target="_blank")
-									i.footer__socials-item(class="fab fa-instagram")
-		.copyright__wrap
-			.container
-				.copyright
-					i(class="far fa-copyright")
-					|  2018 Clever, Все права защищены.
+				.col-12.col-md-6.col-lg-3.mt-3.footer-contacts-col
+					.footer__title Мы на карте
+					iframe.footer__map(src="https://yandex.by/map-widget/v1/-/CBqcYNGLPB" width="100%" height="100%" frameborder="0")					
+		.container.mt-5.mt-lg-0
+			.copyright-logo
+				img(src='images/logo-fff.png').footer__logo-img
+			.copyright
+				i(class="far fa-copyright")
+				|  2018 Clever, Все права защищены.

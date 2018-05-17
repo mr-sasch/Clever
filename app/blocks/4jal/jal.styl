@@ -2,6 +2,9 @@
 .jal
 	position relative
 	display block
+	background-image url('../../images/jal-bg.png')
+	background-size cover
+	background-position center
 
 #jaluziAnchor
 	position absolute
@@ -16,11 +19,23 @@
 	padding-bottom 10px
 
 .title-left__title
+	position relative
 	display inline-block
 	font-family MullerBold
 	font-size 36px
 	color #00427b
 	text-transform uppercase
+
+.title-left__info
+	position absolute
+	top -10px
+	right -28px
+	font-size 21px
+	color #acacac
+	cursor pointer
+	transition .2s ease
+.title-left__info:hover
+	color #949494
 
 .title-left__sep
 	margin-left 20px
@@ -30,23 +45,42 @@
 
 // Боковое меню
 .side-nav__li
+	position relative
 	padding 20px 15px
 	font-size 18px
 	background-color #1a5588
 	border-bottom 2px solid #00427b
+	transition .2s ease
+	overflow hidden
+.side-nav__li:hover
+	background-color #336895
 .side-nav__li:last-child
 	border-bottom none
 .nav-pills .side-nav__li.nav-link.active, .nav-pills .show>.nav-link
 	color #fff
 	background-color #336895
-	border-left 8px solid #fff
+	border-left 8px solid #fd7c47
 .nav-pills .side-nav__li.nav-link
 	color #fff
 	border-radius 0
-// /Жалюзи заголовок Левый
 
-// .jal__right-wrap
-// 	margin-left 30px
+.side-nav__action
+	position absolute
+	display inline-block
+	top -15px
+	right -18px
+	height 40px
+	width 40px
+	font-size 13px
+	color #fff
+	background-color #ff0000
+	border-radius 50%
+
+.side-nav__action-i
+	position absolute
+	bottom 8px
+	left 8px
+// /Жалюзи заголовок Левый
 
 // Заголовок обычный
 .title-simple
@@ -157,5 +191,120 @@
 	top -1px
 	font-size 14px
 	color green
+
+// Акционный баннер
+.jal__banner
+	overflow hidden
+	position relative
+	background-image url('../../images/jal-banner.png')
+	background-position center
+	background-size cover
+	color #fff
+	min-height 147px
+	margin-bottom 55px
+	box-shadow 0 0 30px 0 rgba(0, 0, 0, .25)
+
+// Левая клолонка
+.jal__banner-left
+	margin-top 30px
+.banner__title
+	font-size 36px
+	color #ff0000
+	background-color #ffff00
+	display inline
+	padding 5px 10px 0 30px
+	font-family MullerBold
+	margin-top 30px
+.banner__txt
+	padding-left 30px
+	font-size 24px
+	font-family MullerLight
+	margin-top 4px
+
+// Центральная клолонка
+.jal__banner-center
+	position relative
+.banner__circle
+	position absolute
+	background-color #ffff00
+	height 184px
+	width 184px
+	border-radius 50%
+	top 50%
+	transform translateY(-50%)
+	z-index 20
+.banner__circle-txt
+	position absolute
+	top 50%
+	left 50%
+	width 100%
+	transform translate(-50%, -38%) rotate(10deg)
+	font-size 61px
+	color #ff0000
+	font-family MullerBold
+.banner__circle-txt-minus
+	margin-right -15px
+	margin-left 15px
+
+// Правая колонка
+.jal__banner-right
+	padding 39px 0
+	text-align center
+.banner__price-new
+	font-family MullerLight
+	font-size 24px
+.banner__price-new-price
+	font-family MullerBold
+	font-size 36px
+.banner__price-new-crc
+	font-size 18px
+
+
+.banner__price-ex-prc
+	position relative
+	font-size 24px
+	font-family MullerBold
+	display inline-block
+.banner__price-ex-prc-stroke
+	position absolute
+	width 130%
+	height 4px
+	background-color #ff0000
+	top 50%
+	left 50%
+	transform translate(-50%, -50%) rotate(-15deg)
+
+.banner__price-ex-crc
+	font-size 18px
+.banner__price-ex
+	font-size 24px
+	font-family MullerLight
+.banner__square
+	font-size 14px
+	margin-left -6px
+	vertical-align super
+
+// Подчеркивание
+.jal__banner-underline
+	position absolute
+	width 100%
+	bottom 0
+	left 0
+	background-color #00427b
+	height 20px
+
+// Адаптация
+@media screen and (min-width 0)
+	.banner__circle
+		position relative
+		transform none
+		margin auto
+		margin-top 30px
+@media screen and (min-width 767px)
+	.banner__circle
+		position absolute
+		transform translateY(-50%)
+		margin inherit
+		margin-top inherit
 
 // /Жалюзи

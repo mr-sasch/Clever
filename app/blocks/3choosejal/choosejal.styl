@@ -2,8 +2,12 @@
 .choosejal
 	padding 70px 0
 	display block
-	background-color #fff
-	border-top 16px solid #e4e4e4
+	position relative
+	z-index 20
+	background url('../../images/choosejal__bg.png')
+	background-size cover
+	background-position center
+	box-shadow 0 -2px 40px 0 rgba(0, 0, 0, .5)
 	.choose-item
 		min-height 140px
 
@@ -35,7 +39,7 @@
 
 
 .choose-item__content-title
-	margin-top 40px
+	margin-top 30px
 	text-transform uppercase
 	font-size 18px
 	line-height 24px
@@ -52,6 +56,17 @@
 .choose-item__img-img
 	position relative
 	z-index 20
+.choose-item__img-img:after
+	position absolute
+	z-index -1
+	content ''
+	height 110%
+	width 110%
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	border-radius 50%
+	background-color #fff
 
 .choose-item__img-vert
 	position absolute
@@ -61,7 +76,7 @@
 	width 60px
 	height 100%
 	transform translateX(-50%)
-	background-color #e8e8e8
+	background-color #efab52
 
 .choosejal-col
 	.choose-item__img-vert

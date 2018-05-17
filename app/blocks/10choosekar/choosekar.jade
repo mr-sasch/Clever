@@ -1,5 +1,5 @@
 mixin choosekar()
-	+b.choosekar.mt-3&attributes(attributes)
+	+b.choosekar&attributes(attributes)
 		block
 		.container
 			mixin titleCenter(title)
@@ -11,7 +11,8 @@ mixin choosekar()
 						.choose-item
 							.choose-item__img
 								.choose-item__img-vert
-								img(src= img data-aos="fade-up").choose-item__img-img.aos-init
+								.choose-item__img-img.aos-init(data-aos="fade-up")
+									img(src= img)
 							.choose-item__content
 								.choose-item__content-title= title
 								.choose-item__content-txt= text
