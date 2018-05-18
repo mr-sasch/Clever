@@ -17,20 +17,21 @@ mixin header()
 						.header__top-item-separator.mx-3.d-none.d-xl-inline-block
 						.header__top-item.px-sm-0.py-1.py-xl-0
 							.fas.fa-clock.header-icon-color.mr-2
-							| Пн-Пт: 9:00 до 18:00
+							span Пн-Пт: 9:00 до 18:00
 						// Разделитель
 						.header__top-item-separator.mx-3.d-none.d-xl-inline-block
 						.header__top-item.header__phones.d-flex.flex-column.flex-lg-row.align-items-lg-center
-							.header__phones1.pb-1
+							span.header__phones1
 								.fa.fa-phone.header-icon-color.mr-2
 								| +7 (123)
 								strong(style='font-weight: 600; color: #fff').font-bold 456-78-90
 								span(style='margin-right: 5px;') ,
-							.header__phones2
+							span.header__phones2
 								| +7 (123)
 								strong(style='font-weight: 600; color: #fff').font-bold 098-76-65 
 								span.header-icon-color (whatsapp, viber)
-					.header__top-right.header-icon-color.pb-2.pb-lg-0.d-flex.flex-wrap.justify-content-center.align-items-center Мы в соц.сетях:
+					.header__top-right.header-icon-color.pb-2.pb-lg-0.d-flex.flex-wrap.justify-content-center.align-items-center 
+						span Мы в соц.сетях:
 						a.footer-soc-a(href='https://vk.com' target="_blank")
 							.fab.fa-vk.pl-2.pr-1.py-1.header-socials.header-socials__vk
 						a.footer-soc-a(href='https://www.instagram.com' target="_blank")
