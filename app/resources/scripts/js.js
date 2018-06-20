@@ -164,7 +164,7 @@ $('.photo-slider').slick({
   dots: false,
   infinite: true,
   speed: 300,
-  slidesToShow: 1,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -235,7 +235,6 @@ $(window).on('load', function() {
 	});
 
 });
-
 
 // Инициация AOS
 AOS.init({

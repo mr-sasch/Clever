@@ -46,14 +46,26 @@ mixin jalcount()
 									.jalcount__input-ttl Ширина, см
 									input(type='number' step='.10' value='' style='text-align: center;').jalcount__input-inpt#jalWidth
 								.col-6
-									+jalcountInput('Ваше имя')
+									.jalcount__input-ttl Ваше имя
+									input(type='text').jalcount__input-inpt#jalName
 								.col-6
 									.jalcount__input-ttl Номер телефона
-									input(type='text' placeholder='+7 (___) ___-__-__').jalcount__input-inpt
+									input(type='text' placeholder='+7 (___) ___-__-__').jalcount__input-inpt#jalPhone
 								.col-12.my-2.align-items-center.flex-column.d-flex
 									.jalcount__note.my-3
 										span(style='color: #ff7603') * 
 										| Отправляя форму, Вы соглашаетесь с нашей 
 										a(href='#privacy' data-toggle='modal').privacy-link политикой конфиденциальности
 									.jalcount__btn
-										button(type='submit' data-toggle='modal' data-target='#thnx').btn-simple.slider__submit Рассчитать
+										//- button(type='submit').btn-simple.slider__submit Рассчитать
+										.btn-simple.slider__submit.jalcount__submit Добавить в заказ
+				.col-12.card.d-flex.flex-row.justify-content-around
+					.card__product
+						.card__product.card__ttl Название
+						.card__product.card__product-res
+					.card__height
+						.card__height.card__ttl	Высота, см
+						.card__height.card__height-res
+					.card__width
+						.card__width.card__ttl Ширина, см
+						.card__width.card__width-res

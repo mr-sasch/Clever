@@ -2,33 +2,35 @@
 	// do not specify reporter here
 	// because it breaks SublimeLinter-contrib-stylint
 	// use gulp task style:lint instead
-	"blocks": "never",
-	"brackets": "never",
-	"colons": "never",
+	"blocks": false,
+	"brackets": false,
+	"colons": false,
 	"colors": false,
-	"commaSpace": "always",
-	"commentSpace": "always",
-	"cssLiteral": "never",
-	"depthLimit": 5,
-	"duplicates": true,
-	"efficient": "always",
-	"extendPref": "@extends",
+	"commaSpace": false,
+	"commentSpace": false,
+	"cssLiteral": false,
+	"depthLimit": false,
+	"duplicates": false,
+	"efficient": false,
+	"extendPref": false,
 	"globalDupe": false,
 	"indentPref": false,
-	"leadingZero": "never",
+	"leadingZero": false,
 	"maxErrors": false,
 	"maxWarnings": false,
-	// "mixed": true, // bug: throw error when there are spaces after rule before comment
-	"namingConvention": "BEM",
-	"namingConventionStrict": true,
-	"none": "always",
-	"noImportant": true,
-	"parenSpace": "never",
+	// "mixed": false, // bug: throw error when there are spaces after rule before comment
+	// "namingConvention": "BEM",
+	"namingConvention": false,
+	"namingConventionStrict": false,
+	"none": false,
+	"noImportant": false,
+	"parenSpace": false,
 	"placeholders": false,
-	"prefixVarsWithDollar": true,
-	"quotePref": "single",
-	"semicolons": "never",
-	"sortOrder": [ // discuss 7
+	"prefixVarsWithDollar": false,
+	"quotePref": false,
+	"semicolons": false,
+	"sortOrder": false,
+	/* "sortOrder": [ // discuss 7
 		"all", // all: initial should be first
 
 		"position",
@@ -209,12 +211,12 @@
 		"animation-direction",
 		"backface-visibility",
 		"will-change"
-	],
-	"stackedProperties": "never",
-	// "trailingWhitespace": "never", // bug: throw error when there are spaces after rule before comment
-	"universal": "never",
-	"valid": true, // discuss 8
+	], */
+	"stackedProperties": false,
+	// "trailingWhitespace": false, // bug: throw error when there are spaces after rule before comment
+	"universal": false,
+	"valid": false, // discuss 8
 	"mixins": ["size", "margin-x", "margin-y", "padding-x", "padding-y", "sprite", "retinaSprite"],
-	"zeroUnits": "never",
+	"zeroUnits": false,
 	"zIndexNormalize": false
 }
