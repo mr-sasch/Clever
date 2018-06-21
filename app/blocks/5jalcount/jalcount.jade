@@ -32,13 +32,13 @@ mixin jalcount()
 							form#jalCount.row.my-3
 								.col-12
 									.jalcount__input-ttl Тип жалюзи
-									select(name='jal-type' type='select' form='jalCount').jalcount__input-inpt
-										option(value='goriz') Горизонтальные жалюзи
-										option(value='vert') Вертикальные жалюзи
-										option(value='rul') Рулонные жалюзи
-										option(value='foto') Фотожалюзи
-										option(value='plisse') Шторы-плиссе
-										option(value='electro') Жалюзи с электроприводом
+									select(name='jal-type' type='select' form='jalCount').jalcount__input-inpt#jalcountType
+										option(value='Горизонтальные жалюзи') Горизонтальные жалюзи
+										option(value='Вертикальные жалюзи') Вертикальные жалюзи
+										option(value='Рулонные жалюзи') Рулонные жалюзи
+										option(value='Фотожалюзи') Фотожалюзи
+										option(value='Шторы-плиссе') Шторы-плиссе
+										option(value='Жалюзи с электроприводом') Жалюзи с электроприводом
 								.col-6
 									.jalcount__input-ttl Высота, см
 									input(type='number' step='.10' value='' style='text-align: center;').jalcount__input-inpt#jalHeight
@@ -59,13 +59,33 @@ mixin jalcount()
 									.jalcount__btn
 										//- button(type='submit').btn-simple.slider__submit Рассчитать
 										.btn-simple.slider__submit.jalcount__submit Добавить в заказ
-				.col-12.card.d-flex.flex-row.justify-content-around
-					.card__product
-						.card__product.card__ttl Название
-						.card__product.card__product-res
-					.card__height
-						.card__height.card__ttl	Высота, см
-						.card__height.card__height-res
-					.card__width
-						.card__width.card__ttl Ширина, см
-						.card__width.card__width-res
+				.container
+					.cart.row
+						.col-12.d-flex.flex-row.justify-content-around
+							.cart__product
+								.cart__product.cart__ttl Название
+								//- .cart__product.cart__product-res
+							.cart__height
+								.cart__height.cart__ttl Высота, см
+								//- .cart__height.cart__height-res
+							.cart__width
+								.cart__width.cart__ttl Ширина, см
+								//- .cart__width.cart__width-res
+							.cart__name
+								.cart__name.cart__ttl Имя
+								//- .cart__name.cart__name-res
+							.cart__phone
+								.cart__phone.cart__ttl Телефон
+								//- .cart__phone.cart__phone-res
+							.cart__remove
+								.cart__remove.cart__ttl Удалить
+								//- .cart__remove.cart__remove-res
+					.row.justify-content-center
+						.col-12.py-4.text-center
+							//- Кнопка отправить
+							.cart__send.btn-simple.slider__submit.jalcount__submit Отправить
+					//- Скрытая форма
+					form#cart
+						input(type='text')#cartInput
+						input(type='submit')#cartSubmit
+						

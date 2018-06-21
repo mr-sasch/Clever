@@ -1,5 +1,4 @@
 // Горизонтальный слайдер
-
 var sliderHoriz = document.getElementById('calc-horiz');
 
 noUiSlider.create(sliderHoriz, {
@@ -40,10 +39,9 @@ for ( var i = 0; i < pips.length; i++ ) {
   	sliderHoriz.noUiSlider.set([this.value, null]);
   });
   // /Активируем инпуты - Ширина
-
+// Горизонтальный слайдер
 
 // Вертикальный слайдер
-
 var sliderVert = document.getElementById('calc-vert');
 
 noUiSlider.create(sliderVert, {

@@ -118,13 +118,39 @@ select.jalcount__input-inpt,
 		right -27px
 
 /* Новые стили для корзины */
+.cart
+	background-color #fff
+	text-align center
+
 .jalcount__btn .slider__submit
 	line-height 24px
 	cursor pointer
 
-.card__ttl
+.cart__ttl
 	min-width 150px
 	padding 10px 0
+	font-weight 600
+
+.cart__product-res,
+.cart__height-res,
+.cart__width-res,
+.cart__name-res,
+.cart__phone-res,
+.cart__remove-res
+	padding 10px 0
+
+.cart__remove.cart__remove-res
+  position relative
+
+.cart__remove.cart__remove-res:after
+	content 'x'
+	color red
+	cursor pointer
+
+.cart__send
+	display inline
+	cursor pointer
+
 /* /Новые стили для корзины */
 
 // /Рассчитать стоимость жалюзи
