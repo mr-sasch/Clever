@@ -138,6 +138,7 @@ select.jalcount__input-inpt,
 .cart__phone-res,
 .cart__remove-res
 	padding 10px 0
+	min-height 40px
 
 .cart__remove.cart__remove-res
   position relative
@@ -150,6 +151,54 @@ select.jalcount__input-inpt,
 .cart__send
 	display inline
 	cursor pointer
+
+.cart__table
+	color grey
+	margin-top 10px
+	th
+		padding 10px
+		border 1px solid grey
+	td
+		padding 10px
+		border 1px solid grey
+
+	/* Кнопка "Корзина" */
+.cartbtn
+	position absolute
+	right -80px
+	opacity 0
+	top calc(100% + 20px)
+	color #f1742f
+	padding 8px
+	font-size 30px
+	border: 1px solid #f1742f;
+	border-radius: 5px;
+	cursor pointer
+	transition right .3s ease, opacity .4s ease
+.cartbtn.active
+	right 10px
+	opacity 1
+
+.cartbtn__count
+	position absolute
+	right 3px
+	top -10px
+	color #ffffff
+	background-color red
+	border-radius 50%
+	display flex
+	width 18px
+	height 18px
+.cartbtn__numb
+	font-size 14px
+	line-height 1px
+	position absolute
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	/* /Кнопка "Корзина" */
+#cartmodal.modal-details .modal-dialog
+	max-width 1000px
 
 /* /Новые стили для корзины */
 

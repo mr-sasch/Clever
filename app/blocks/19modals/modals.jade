@@ -109,6 +109,51 @@ mixin modals()
 							.thnx-content Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
 									
 		// Текст о карнизах
+		#cartmodal.modal.modal-details.fade(tabindex='-1' role='dialog' aria-hidden="true")
+			.modal-dialog.modal-dialog-centered(role='document')
+				.modal-content
+					.modal-header
+						img.modal-close(src='images/modals-cancel.png' data-dismiss='modal' aria-label='Close')
+					.modal-body
+						.container
+							.cart.row
+								.col-12.d-flex.flex-row.justify-content-around
+									.cart__product
+										.cart__product.cart__ttl Название
+										//- .cart__product.cart__product-res
+									.cart__height
+										.cart__height.cart__ttl Высота, см
+										//- .cart__height.cart__height-res
+									.cart__width
+										.cart__width.cart__ttl Ширина, см
+										//- .cart__width.cart__width-res
+									.cart__name
+										.cart__name.cart__ttl Имя
+										//- .cart__name.cart__name-res
+									.cart__phone
+										.cart__phone.cart__ttl Телефон
+										//- .cart__phone.cart__phone-res
+									.cart__remove
+										.cart__remove.cart__ttl Удалить
+										//- .cart__remove.cart__remove-res
+							//- Скрытая таблица
+							table.cart__table.d-none
+								tr
+									th Название
+									th Высота, см
+									th Ширина, см
+									th Имя
+									th Телефон
+							.row.justify-content-center
+								.col-12.py-4.text-center
+									//- Кнопка отправить
+									.cart__send.btn-simple.slider__submit.jalcount__submit Отправить
+							//- Скрытая форма
+							form#cart.d-none(method='get')
+								textarea#cartInput(name='form' style='width: 1000px; height: 500px;')
+								input(type='submit')#cartSubmit
+									
+		// Корзина
 		#karmodal.modal.modal-details.fade(tabindex='-1' role='dialog' aria-hidden="true")
 			.modal-dialog.modal-dialog-centered(role='document')
 				.modal-content

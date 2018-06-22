@@ -49,3 +49,9 @@ mixin header()
 							.px-4.header__btn.header__btn-callback.d-none.d-sm-flex.align-items-center.justify-content-center(data-toggle="modal" data-target="#callBack") Обратный звонок
 			mixin headerBtn(txt)
 				.btn-simple= txt
+			// Кнопка "Корзина"
+			.cartbtn(data-target='#cartmodal' data-toggle='modal')
+				i.fab.fa-opencart.cartbtn__i
+				.cartbtn__count 
+					.cartbtn__numb 1
+			
